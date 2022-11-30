@@ -17,7 +17,6 @@ body {
 
 header {
     overflow: hidden;
-    padding: 20px 10px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr 2fr;
@@ -25,9 +24,10 @@ header {
     align-content: center;
 }
 
-img {
-    height: 60px;
-
+header img {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    height: 64px;
 }
 
 .header-other {
@@ -39,9 +39,10 @@ img {
 .header-middle {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    align-items: center;
 }
 
-header a.active {
+a.active {
     background-color: #f9dc5c;
 }
 
@@ -109,11 +110,87 @@ p {
     grid-template-rows: 4fr 1fr;
 }
 
+/* Attraction Page Section */
+.attraction-content {
+    margin: 0px 4vw;
+}
+
+.attraction-content h2 {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    color: #0c3724;
+}
+
+.attraction-content p {
+    font-family: 'Calibri', sans-serif;
+    font-size: 14pt;
+    color: #0c3724;
+}
+
+h3 {
+    font-family: 'Calibri', sans-serif;
+    font-weight: 200;
+    font-size: 24pt;
+    color: #0c3724;
+}
+
+.attraction-container li {
+    font-family: 'Calibri', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    padding-right: 4px;
+    color: #0c3724;
+}
+
+.activity-card {
+    background-color: #6184db;
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.attraction-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 4vw;
+    column-gap: 4vw;
+}
+
+.attraction-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-inline-start: 0;
+    padding-inline-start: 20px;
+    list-style-position: inside;
+}
+
+.activity-card img {
+    object-fit: cover;
+    height: 26vh;
+    width: 20vw;
+}
+
+.attraction * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity-card p {
+    color: #ffffff;
+    padding: 10px;
+    white-space: normal;
+}
+
 article {
     font-family: 'Calibri', sans-serif;
     font-weight: light;
     font-size: 14pt;
 }
+
+/* Footer Section */
 
 footer {
     position: absolute;
