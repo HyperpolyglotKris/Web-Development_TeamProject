@@ -3,87 +3,134 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
-    width: 100%;
-    min-width: 640px;
-    max-width: 1280px;
-    margin-top: 20px;
+    background-color: beige;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+    margin: 0;
+    height: fit-content;
 }
 
-nav {
-    display: flex;
-    margin-right: 10px;
-    margin-left: 10px;
+.background-image {
+    background-image: url(/Team_Project/images/1-home.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: stretch;
-}
-
-header nav {
-    background-color: aqua;
-    flex-grow: 5;
-}
-
-header div {
-    background-color: aquamarine;
-    display: flex;
-    flex-grow: 2;
-}
-
-header a {
-    display: inline;
-    flex-grow: 1;
-    object-fit: fill;
+    overflow: hidden;
+    padding: 20px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    justify-content: center;
+    align-content: center;
 }
 
 img {
-    object-fit: fill;
-    display: inline-block;
-    max-width: 100%;
-    min-height: 100%;
-    align-self: center;
-    background-color: aquamarine;
+    height: 60px;
+
 }
 
-nav a,
-div a {
-    background-color: blue;
-    color: white;
-    margin: 20px;
-    padding: 20px;
+.header-other {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
 }
 
+.header-middle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+header a.active {
+    background-color: #f9dc5c;
+}
+
+a {
+    margin: 0px 20px;
+    font-family: 'Bradley Hand ITC', sans-serif;
+    font-weight: bold;
+}
+
+.header-other a {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    font-size: 11pt;
+    color: #008489
+}
+
+.header-middle a {
+    color: #000033;
+}
 
 a:link,
 a:visited {
     text-decoration: none;
-    color: white;
+    font-size: 14pt;
+    color: #000033;
+}
+
+h1,
+h2 {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 36pt;
+    color: #2b3a3a;
+    text-align: center;
+    margin: 15%;
+}
+
+h2 {
+    font-size: 30pt;
+    color: #000033;
+}
+
+p {
+    margin: 0;
+}
+
+.content {
+    margin: 0px 10%;
+    display: grid;
+    height: 20%;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.page-container {
+    position: relative;
+    max-height: 100%;
+}
+
+.content-wrap {
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
 }
 
 article {
-    background-color: blue;
-    color: white;
-    margin-top: 20px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: light;
+    font-size: 14pt;
 }
 
 footer {
-    margin-top: 20px;
-    display: flex;
-    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f9dc5c;
+    align-items: center;
 }
 
 footer p {
-    background-color: green;
-    color: white;
-    margin: 20px;
-    padding: 20px;
-    flex-grow: 1;
+    font-family: 'Calibri', sans-serif;
+    font-weight: light;
+    font-size: 10pt;
+    color: #6d8a92;
+    text-align: center;
 }
