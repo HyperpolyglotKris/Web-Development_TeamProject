@@ -142,7 +142,7 @@ h3 {
 }
 
 .activity-card {
-    background-color: #6184db;
+    background-color: #f9dc5c;
     border-radius: 16px;
     padding: 20px;
     display: grid;
@@ -180,7 +180,7 @@ h3 {
 }
 
 .activity-card p {
-    color: #ffffff;
+    color: black;
     padding: 10px;
     white-space: normal;
 }
