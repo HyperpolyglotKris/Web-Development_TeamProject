@@ -8,37 +8,12 @@ body {
     min-height: 100vh;
 }
 
+/* General Section */
+
 .background-image {
     background-image: url(/Team_Project/images/1-home.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-header {
-    overflow: hidden;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 5fr 2fr;
-    justify-content: center;
-    align-content: center;
-}
-
-header img {
-    padding-left: 2vw;
-    padding-top: 2vh;
-    height: 64px;
-}
-
-.header-other {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: flex-end;
-}
-
-.header-middle {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
 }
 
 #active {
@@ -50,16 +25,6 @@ a {
     font-family: 'Bradley Hand ITC', sans-serif;
     font-weight: bold;
     text-align: center;
-}
-
-.header-other a {
-    font-family: 'Bradley Hand ITC', sans-serif;
-    font-size: 11pt;
-    color: #008489
-}
-
-.header-middle a {
-    color: #000033;
 }
 
 a:link,
@@ -108,6 +73,45 @@ p {
     padding-bottom: 3rem;
     display: grid;
     grid-template-rows: 4fr 1fr;
+}
+
+/* Header Section */
+
+header {
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    justify-content: center;
+    align-content: center;
+}
+
+header img {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    height: 64px;
+}
+
+.header-other {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+}
+
+.header-middle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.header-other a {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    font-size: 11pt;
+    color: #008489
+}
+
+.header-middle a {
+    color: #000033;
 }
 
 /* Attraction Page Section */
