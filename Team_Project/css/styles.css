@@ -337,10 +337,10 @@ article {
     outline-style: auto;
     border-radius: 12px;
     outline: black;
-    box-shadow: 6px 4px 4px black;
+    box-shadow: 6px 4px 4px #131d25;
     align-content: center;
     margin: auto;
-    width: 80vw;
+    width: 60vw;
    
     border: 1px solid black;
     margin-bottom: 20px;
@@ -350,24 +350,26 @@ article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    margin: 24px 25vw;
+    margin: 24px 10vw;
 }
 
 .price-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    background-color: #f9dc5c;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 6px 4px 4px black;
+    background-color: #546d83;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 6px 4px 4px #131d25;
 }
 
 .submit-button {
-    background-color: #f9dc5c;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 6px 4px 4px black;
+    background-color: #546d83;
+    color: #ffffff;
+    padding: 8px;
+    border-radius:6px;
+    box-shadow: 6px 4px 4px #131d25;
 }
 
 /* Footer Section */
