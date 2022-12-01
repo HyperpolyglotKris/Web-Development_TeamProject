@@ -155,6 +155,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0px 4vw;
+    margin-bottom: 5rem;
     column-gap: 4vw;
 }
 
@@ -205,7 +206,7 @@ article {
     font-family: 'Calibri', sans-serif;
     font-size: 18pt;
     color: #574c45;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     margin-left: 2vw;
     margin-right: 2vw;
 }
@@ -225,7 +226,7 @@ article {
     align-items: center;
     justify-content: center;
     place-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .restaurant {
@@ -259,6 +260,99 @@ article {
 .restaurant p {
     margin: 0 1vw;
     color: #ffffff;
+}
+
+/* Reservation Section */
+
+.reservation h2 {
+    text-align: center;
+}
+
+.reservation p {
+    font-family: 'Calibri', sans-serif;
+    font-size: 12pt;
+    font-weight: 600px;
+}
+
+.reservation-grid {
+    margin: 28px 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    column-gap: 2vw;
+}
+
+.hotel img {
+    object-fit: cover;
+    height: 200px;
+    width: 30vw;
+}
+
+.hotel {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+.room-name {
+    justify-self: center;
+}
+
+.room-name input[type=radio] {
+    display: inline;
+    height: 16px;
+}
+
+.room-name h4 {
+    display: inline;
+}
+
+.room-price img {}
+
+.room-price p {}
+
+.form-grid {
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+    padding: 12px;
+    outline-color: #000000;
+    outline-style: auto;
+    border-radius: 12px;
+    outline: black;
+    box-shadow: 6px 4px 4px black;
+    align-content: center;
+    margin: auto;
+    width: 30vw;
+    place-items: center;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.reservation-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 24px 25vw;
+}
+
+.price-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    background-color: #f9dc5c;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 6px 4px 4px black;
+}
+
+.submit-button {
+    background-color: #f9dc5c;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 6px 4px 4px black;
 }
 
 /* Footer Section */
