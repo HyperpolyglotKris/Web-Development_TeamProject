@@ -272,6 +272,7 @@ article {
     font-family: 'Calibri', sans-serif;
     font-size: 12pt;
     font-weight: 600px;
+    margin: 0 2vw;
 }
 
 .reservation-grid {
@@ -304,18 +305,28 @@ article {
     height: 16px;
 }
 
-.room-name h4 {
+.room-name h3 {
     display: inline;
 }
 
-.room-price img {}
+.room-price img {
+    position: relative;
+}
 
-.room-price p {}
+.room-text {
+    position: relative;
+}
 
-.form-grid {
+.room-text h4 {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Lobster', cursive;
+}
+
+.reservation-form {
     display: grid;
-    width: 50vw;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: min-content;
     background-color: white;
     padding: 12px;
     outline-color: #000000;
@@ -325,10 +336,14 @@ article {
     box-shadow: 6px 4px 4px black;
     align-content: center;
     margin: auto;
-    width: 30vw;
     place-items: center;
     border: 1px solid black;
     margin-bottom: 20px;
+}
+
+.reservation-form form {
+    display: grid;
+    grid-template-rows: 3fr 4fr;
 }
 
 .reservation-buttons {
@@ -342,17 +357,21 @@ article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    background-color: #f9dc5c;
+    background-color: lightgray;
     padding: 12px;
     border-radius: 12px;
     box-shadow: 6px 4px 4px black;
 }
 
 .submit-button {
-    background-color: #f9dc5c;
+    background-color: lightgray;
     padding: 12px;
     border-radius: 12px;
     box-shadow: 6px 4px 4px black;
+}
+
+.reservation-content {
+    padding-bottom: 3rem;
 }
 
 /* Footer Section */
