@@ -74,18 +74,118 @@
         </div>
 
         <div class="form-grid">
-            <p>Check in</p>
-            <p>Check out</p>
-            <p>How many guest?</p>
-        </div>
+            <form id="hotel_reservation" method="post" action="#"></form>
+           <!--Guest Personal Information-->
+            <fieldset>
+                <legend>Guest Personal Information</legend>
 
-        <div class="reservation-buttons">
-            <div class="price-button">
-                <p>Total price:</p>
-                <p id="price">$0.00</p>
-            </div>
-            <div class="submit-button">
-                <p>Book now</p>
+                <table>
+                    <!--row 1-->
+                    <tr>
+                        <td>
+                            <lable for="first_name">First Name:</lable>
+                        </td>
+                        <td>
+                            <input type="text" id="first_name" size="20" maxlength="20">
+                        </td>
+                    </tr>
+                    <!--row 2-->
+                    <tr>
+                        <td>
+                            <lable for="Last_name">Last Name:</lable>
+                        </td>
+                        <td>
+                            <input type="text" id="Last_name" size="20" maxlength="20">
+                        </td>
+                    </tr>
+                  
+                     <!--row 3-->
+                    <tr>
+                        <td>
+                            <label for="email">Email Address:</label>
+                        </td>
+                        <td>
+                            <input type="text"  id="email" size="40" maxlength="30">
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+            <!--Hotel Reservation-->
+            <fieldset>
+                <legend>Hotel Reservation</legend>
+
+                <table>
+                   <!--row 1-->
+                    <tr>
+                        <td>
+                            <label for="adults">Adults:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="adults" min="1" max="2">
+                        </td>
+                    </tr>
+                    <!--row 2-->
+                    <tr>
+                        <td>
+                            <label for="children">Children:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="children" min="0" max="4">
+                        </td>
+                    </tr>
+                    <!--row 3-->
+                    <tr>
+                        <td>
+                            <label for="number_of_nights">Number of Nights:</label>
+                        </td>
+                        <td>
+                            <select id="number_of_nights">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10"10></option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <!--row 4-->
+                    <tr>
+                        <td>
+                            <label for="arrival_date">Arrival Date:</label>
+                        </td>
+                        <td>
+                            <input type="date" id="arrival_date">
+                        </td>
+                    </tr>
+                    <!--row 5-->
+                    <tr>
+                        <td>
+                            <label for="departure_date">Departure Date:</label>
+                        </td>
+                        <td>
+                            <input type="date" id="departure_date">
+                        </td>
+                    </tr>
+                 
+                </table>
+            </fieldset>
+
+            <div class="reservation-buttons">
+                <div class="price-button">
+                    <p>Total price:</p>
+                    <p id="price">$0.00</p>
+                </div>
+                <div class="submit-button">
+                    <p>Book now</p>
+                </div>
             </div>
         </div>
 

@@ -310,12 +310,27 @@ article {
 
 .room-price img {}
 
-.room-price p {}
+.room-price p {
+    position: absolute;
+    bottom: 10px;
+    left: 8vw;
+    
+}
+.background-of-price{
+    position: absolute;
+    height: 35px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff7e;
+    
+}
+.dining-include {
+    left: 60px;
+    font-size: 10px;
+  
+}
 
 .form-grid {
-    display: grid;
-    width: 50vw;
-    grid-template-columns: 1fr 1fr 1fr;
     background-color: white;
     padding: 12px;
     outline-color: #000000;
@@ -325,8 +340,8 @@ article {
     box-shadow: 6px 4px 4px black;
     align-content: center;
     margin: auto;
-    width: 30vw;
-    place-items: center;
+    width: 80vw;
+   
     border: 1px solid black;
     margin-bottom: 20px;
 }
