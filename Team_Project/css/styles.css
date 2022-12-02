@@ -272,9 +272,11 @@ article {
     font-family: 'Calibri', sans-serif;
     font-size: 12pt;
     font-weight: 600px;
+    margin: 20px;
 }
 
 .reservation-grid {
+    font-family: 'Calibri', sans-serif;
     margin: 28px 12px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -308,32 +310,40 @@ article {
     display: inline;
 }
 
+.room-price{
+    position: relative;
+}
+
 .room-price img {}
 
 .room-price p {
     position: absolute;
-    bottom: 10px;
-    left: 8vw;
+    bottom: 2%;
+    left: 5vw;
+    color: white;
+    font-size: 25px;
     
 }
 .background-of-price{
     position: absolute;
-    height: 35px;
-    bottom: 0;
+    height: 15%;
+    bottom: 2%;
     width: 100%;
-    background-color: #ffffff7e;
+    background-color: #546d8394;
     
 }
 .dining-include {
-    left: 60px;
-    font-size: 10px;
+    left: 60%;
+    font-size: 18px;
+    color: white;
   
 }
 
 .form-grid {
+    font-family: 'Calibri', sans-serif;
     background-color: white;
     padding: 12px;
-    outline-color: #000000;
+    outline-color: #131d25;
     outline-style: auto;
     border-radius: 12px;
     outline: black;
