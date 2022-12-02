@@ -384,7 +384,7 @@ article {
 
 /*Sign in/up Section*/
 
-.sign-in-form{
+.sign-in-up-form{
     width: 360px;
     margin: auto;
     padding: 10px;
@@ -394,10 +394,10 @@ article {
   
 }
 
-.sign-in-form h3{
+.sign-in-up-form h3{
     text-align: center;
 }
-#sign-in-btn{
+#sign-in-btn, #sign-up-btn{
     background-color: #76a1b1;
     border:none;
     border-radius: 4px;

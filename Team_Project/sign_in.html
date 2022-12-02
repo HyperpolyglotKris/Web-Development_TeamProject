@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <title>Sign in</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+       
+
+        function validateForm(){
+            let x = document.forms["sign-in"]["email"].value;
+            let y = document.forms["sign-in"]["password"].value;
+
+            if(x == ""){
+                alert("Pls enter your email address!");
+                return false;
+
+            } else if(y == ""){
+                alert("Pls enter your password!");
+                return false;
+            }
+            else {
+                alert("You have sucessfully signed in!");
+                return true;
+            }
+        }
+    </script>
 </head>
 
 
@@ -28,8 +50,8 @@
 
     <main>
 
-        <div class="sign-in-form">
-            <form id="sign-in" method="post" action="home.html">
+        <div class="sign-in-up-form">
+            <form id="sign-in" name="sign-in" action="home.html" onsubmit="return validateForm()" >
           
             <fieldset>
 
@@ -43,7 +65,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="email" id="email" size="40" maxlength="40">
+                            <input type="email" id="email" name="email" size="40" maxlength="40">
                         </td>
                     </tr>
                   
@@ -55,11 +77,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" id="password" size="40" maxlength="40" height="52">
+                            <input type="text" id="password" name="password" size="40" maxlength="40" height="52">
                         </td>
                     </tr>
                 </table>
                 <input type="submit" id="sign-in-btn" value="Sign in">
+
+               
                 
             </fieldset>
         </form>
