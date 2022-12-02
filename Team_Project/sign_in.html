@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Special Events</title>
+    <title>Sign in</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 
 <body>
     <header>
@@ -23,6 +25,48 @@
             <a id="language">EN/FR</a>
         </div>
     </header>
+
+    <main>
+
+        <div class="sign-in-form">
+            <form id="sign-in" method="post" action="home.html">
+          
+            <fieldset>
+
+                <h3>Sign in to your account</h3>
+                <table>
+                    <!--row 1-->
+                    <tr>
+                        <td>
+                            <lable for="Email_Address">Email Address:  </lable>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" id="email" size="40" maxlength="40">
+                        </td>
+                    </tr>
+                  
+                    <!--row 2-->
+                    <tr>
+                        <td>
+                            <lable for="password">Password:</lable>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="password" size="40" maxlength="40" height="52">
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" id="sign-in-btn" value="Sign in">
+                
+            </fieldset>
+        </form>
+        
+        </div>
+            
+    </main>
 
     <footer>
         <p>CustomerService@ccab.com</p>
