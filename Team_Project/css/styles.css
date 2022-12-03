@@ -378,6 +378,58 @@ article {
     padding-bottom: 3rem;
 }
 
+/* Special Events Section */
+
+.special_events {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.special_events_txt_and_img {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.special_events_img {
+    margin-right: 3rem;
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+.special_events_txt {
+    text-align: justify;
+}
+
+.special_events_container h2 {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    size: 30pt;
+    color: #0c3724;
+}
+
+.special_events_container p {
+    color: #0c3724;
+}
+
+.special_events_table table {
+    border: solid 1.5px black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+.special_events_table th,
+.special_events_table tr,
+.special_events_table table td {
+    border: solid 2px #039c05;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
 /* Footer Section */
 
 footer {
