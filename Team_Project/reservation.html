@@ -5,6 +5,60 @@
     <meta charset="UTF-8">
     <title>Reservation</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        function validateReservation() {
+            let first_name = document.forms["hotel_reservation"]["first_name"].value;
+            let last_name = document.forms["hotel_reservation"]["last_name"].value;
+            let email_address = document.forms["hotel_reservation"]["email"].value;
+            let adults = document.getElementById("adults").value;
+            let children = document.getElementById("children").value;
+            let number_of_nights = document.getElementById("number_of_nights").value;
+            let check_in_date = document.getElementById("check_in_date").value;
+            let radios = document.querySelectorAll('input[type="radio"]:checked');
+            let selected_room = radios.length > 0 ? radios[0].value : null;
+            // Get today's date
+            let currentDate = new Date().toJSON().slice(0, 10);
+
+            console.log(currentDate);
+            console.log(adults);
+            console.log(children);
+            console.log(number_of_nights);
+            console.log(selected_room);
+            console.log(currentDate);
+            console.log(check_in_date);
+
+            if (first_name == "") {
+                alert("Please enter your first name!");
+                return false;
+            } else if (last_name == "") {
+                alert("Please enter your last name!");
+                return false;
+            } else if (email_address == "") {
+                alert("Please enter your email address!");
+                return false;
+            } else if (adults == "" || adults == 0) {
+                alert("Minimum of one adult per room is required!");
+                return false;
+            } else if (number_of_nights == 0) {
+                alert("Minimum of one night is required!");
+                return false;
+            } else if (check_in_date == "") {
+                alert("Please enter a check-in date!");
+                return false;
+            } else if (selected_room == null) {
+                alert("Please select a room type!");
+                return false;
+            } else if (check_in_date < currentDate) {
+                alert("Cannot check-in in the past!");
+                return false;
+            }
+        }
+
+        function displayTotalPrice() {
+
+        }
+    </script>
 </head>
 
 <body>
@@ -37,8 +91,7 @@
             <div class="reservation-grid">
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-pool" name="hotel"
-                                value="Room with a pool">
+                        <div class="room-name"> <input type="radio" id="room-pool" name="hotel" value="0">
                             <h4>Room with a pool</h4>
                         </div>
                         <div class="room-price">
@@ -51,7 +104,7 @@
                 </label>
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-suite" name="hotel" value="Suite">
+                        <div class="room-name"> <input type="radio" id="room-suite" name="hotel" value="1">
                             <h4>Suite</h4>
                         </div>
                         <div class="room-price">
@@ -64,7 +117,7 @@
                 </label>
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-double" name="hotel" value="Two beds room">
+                        <div class="room-name"> <input type="radio" id="room-double" name="hotel" value="2">
                             <h4>Two beds room</h4>
                         </div>
                         <div class="room-price">
@@ -89,7 +142,7 @@
                                     <lable for="first_name">First Name:</lable>
                                 </td>
                                 <td>
-                                    <input type="text" id="first_name" size="20" maxlength="20">
+                                    <input type="text" id="first_name" name="first_name" size="20" maxlength="20">
                                 </td>
                             </tr>
                             <!--row 2-->
@@ -98,7 +151,7 @@
                                     <lable for="Last_name">Last Name:</lable>
                                 </td>
                                 <td>
-                                    <input type="text" id="Last_name" size="20" maxlength="20">
+                                    <input type="text" id="last_name" name="last_name" size="20" maxlength="20">
                                 </td>
                             </tr>
                             <!--row 3-->
@@ -107,7 +160,7 @@
                                     <label for="email">Email Address:</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="email" size="40" maxlength="30">
+                                    <input type="email" id="email" name="email" size="40" maxlength="30">
                                 </td>
                             </tr>
                         </table>
@@ -122,7 +175,10 @@
                                     <label for="adults">Adults:</label>
                                 </td>
                                 <td>
-                                    <input type="number" id="adults" min="1" max="2">
+                                    <select id="adults">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
                                 </td>
                             </tr>
                             <!--row 2-->
@@ -131,7 +187,13 @@
                                     <label for="children">Children:</label>
                                 </td>
                                 <td>
-                                    <input type="number" id="children" min="0" max="4">
+                                    <select id="children">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
                                 </td>
                             </tr>
                             <!--row 3-->
@@ -140,37 +202,16 @@
                                     <label for="number_of_nights">Number of Nights:</label>
                                 </td>
                                 <td>
-                                    <select id="number_of_nights">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10" 10></option>
-
-                                    </select>
+                                    <input type="number" id="number_of_nights" value="1">
                                 </td>
                             </tr>
                             <!--row 4-->
                             <tr>
                                 <td>
-                                    <label for="arrival_date">Arrival Date:</label>
+                                    <label for="check_in_date">Check-In Date:</label>
                                 </td>
                                 <td>
-                                    <input type="date" id="arrival_date">
-                                </td>
-                            </tr>
-                            <!--row 5-->
-                            <tr>
-                                <td>
-                                    <label for="departure_date">Departure Date:</label>
-                                </td>
-                                <td>
-                                    <input type="date" id="departure_date">
+                                    <input type="date" id="check_in_date">
                                 </td>
                             </tr>
                         </table>
@@ -183,7 +224,7 @@
                     <p>Total price:</p>
                     <p id="price">$0.00</p>
                 </div>
-                <div class="submit-button">
+                <div class="submit-button" onclick="validateReservation()">
                     <p>Book now</p>
                 </div>
             </div>

@@ -488,7 +488,7 @@ article {
 
 .reservation-form form {
     display: grid;
-    grid-template-rows: 3fr 4fr;
+    grid-template-rows: 3fr 3fr;
 }
 
 .reservation-buttons {
@@ -517,6 +517,11 @@ article {
 
 .reservation-content {
     padding-bottom: 3rem;
+}
+
+.reservation-form tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* Special Events Section */
