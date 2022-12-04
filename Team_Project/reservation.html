@@ -46,17 +46,43 @@
             } else if (check_in_date == "") {
                 alert("Please enter a check-in date!");
                 return false;
+            } else if (check_in_date < currentDate) {
+                alert("Please enter current or upcoming date!");
+                return false;
             } else if (selected_room == null) {
                 alert("Please select a room type!");
                 return false;
-            } else if (check_in_date < currentDate) {
-                alert("Cannot check-in in the past!");
-                return false;
+            } else {
+                var room_type = "";
+                if (selected_room == 0) {
+                    room_type = "Room With a Pool";
+                } else if (selected_room == 1) {
+                    room_type = "Suite";
+                } else if (selected_room == 2) {
+                    room_type = "Two Beds Room"
+                }
+                var text = "- Reservation Sent -\n\nName: " + first_name + " " + last_name + "\nEmail: " + email_address + "\nRoom: " + room_type + "\nNumber of Nights: " + number_of_nights + "\nCheck-In Date: " + check_in_date;
+                alert(text)
             }
+
+
         }
 
         function displayTotalPrice() {
-
+            var price = 0.00;
+            let radios = document.querySelectorAll('input[type="radio"]:checked');
+            let selected_room = radios.length > 0 ? radios[0].value : null;
+            let number_of_nights = document.getElementById("number_of_nights").value;
+            if (selected_room == 0) {
+                price = 466.99;
+            } else if (selected_room == 1) {
+                price = 422.88;
+            } else if (selected_room == 2) {
+                price = 388.98;
+            }
+            var totalPrice = price * number_of_nights;
+            var totalPriceString = "$ " + totalPrice;
+            document.getElementById('price').innerText = totalPriceString;
         }
     </script>
 </head>
@@ -91,7 +117,8 @@
             <div class="reservation-grid">
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-pool" name="hotel" value="0">
+                        <div class="room-name"> <input type="radio" id="room-pool" name="hotel" value="0"
+                                onchange="displayTotalPrice()">
                             <h4>Room with a pool</h4>
                         </div>
                         <div class="room-price">
@@ -104,7 +131,8 @@
                 </label>
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-suite" name="hotel" value="1">
+                        <div class="room-name"> <input type="radio" id="room-suite" name="hotel" value="1"
+                                onchange="displayTotalPrice()">
                             <h4>Suite</h4>
                         </div>
                         <div class="room-price">
@@ -117,7 +145,8 @@
                 </label>
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-double" name="hotel" value="2">
+                        <div class="room-name"> <input type="radio" id="room-double" name="hotel" value="2"
+                                onchange="displayTotalPrice()">
                             <h4>Two beds room</h4>
                         </div>
                         <div class="room-price">
@@ -202,7 +231,7 @@
                                     <label for="number_of_nights">Number of Nights:</label>
                                 </td>
                                 <td>
-                                    <input type="number" id="number_of_nights" value="1">
+                                    <input type="number" id="number_of_nights" value="1" onchange="displayTotalPrice()">
                                 </td>
                             </tr>
                             <!--row 4-->
