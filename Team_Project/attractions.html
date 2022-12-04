@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="mySlides1 fade">
-                            <img class="image" src="images/2-The Magic.jpg" style="width:50%">
+                            <img class="image" src="images/2-The Magic.png" style="width:50%">
                             <div class="text"><b>The Magice</b><br><br>Let your kids create and thrive. The room offers
                                 plenty
                                 of fun art activities to boost kids’ creativity. Parents are welcome to join as well.
@@ -131,7 +131,7 @@
 
                     <div class="slideshow-container">
                         <div class="mySlides2 fade">
-                            <img class="image" src="images/2-Alica’s Kitchen.jpg" style="width:50%">
+                            <img class="image" src="images/2-Alica’s Kitchen.png" style="width:50%">
                             <div class="text"><b>Alica’s Kitchen</b><br><br>Learn how to cook with our Chef Alica in a
                                 very
                                 modern, well-equipped, and
@@ -164,7 +164,8 @@
                     </div>
                 </div>
                 <script>
-                    let slideIndex = 0;
+                    let slideIndex1 = 0;
+                    let slideIndex2 = 0;
                     showSlides();
                     showSlides2();
 
@@ -175,14 +176,14 @@
                         for (i = 0; i < slides.length; i++) {
                             slides[i].style.display = "none";
                         }
-                        slideIndex++;
-                        if (slideIndex > slides.length) { slideIndex = 1 }
+                        slideIndex1++;
+                        if (slideIndex1 > slides.length) { slideIndex1 = 1 }
                         for (i = 0; i < dots.length; i++) {
                             dots[i].className = dots[i].className.replace(" active", "");
                         }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                        setTimeout(showSlides, 4000); // Change image every 4 seconds
+                        slides[slideIndex1 - 1].style.display = "block";
+                        dots[slideIndex1 - 1].className += " active";
+                        setTimeout(showSlides, 6000); // Change image every 6 seconds
                     }
 
                     function showSlides2() {
@@ -192,14 +193,14 @@
                         for (i = 0; i < slides.length; i++) {
                             slides[i].style.display = "none";
                         }
-                        slideIndex++;
-                        if (slideIndex > slides.length) { slideIndex = 1 }
+                        slideIndex2++;
+                        if (slideIndex2 > slides.length) { slideIndex2 = 1 }
                         for (i = 0; i < dots.length; i++) {
                             dots[i].className = dots[i].className.replace(" active", "");
                         }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                        setTimeout(showSlides2, 4000); // Change image every 4 seconds
+                        slides[slideIndex2 - 1].style.display = "block";
+                        dots[slideIndex2 - 1].className += " active";
+                        setTimeout(showSlides2, 6000); // Change image every 6 seconds
                     }
                 </script>
 

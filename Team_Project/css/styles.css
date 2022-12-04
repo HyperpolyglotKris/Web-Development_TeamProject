@@ -165,14 +165,25 @@ h3 {
 .mySlides1,
 .mySlides2 {
     display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .slideshow-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #98b5c8;
     border-radius: 30px;
-    height: fit-content;
+    height: 300px;
     position: relative;
     margin: auto;
+}
+
+.slideshow-container img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .dot1,
@@ -262,10 +273,13 @@ h3 {
     width: 20vw;
 }
 
-.attraction * {
+.activity-list li {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-shadow: 2px 1px 1px black;
+    border: 1px solid black;
+    border-radius: 12px;
 }
 
 .activity-card p {
@@ -282,6 +296,18 @@ article {
 
 .attractions-content {
     margin-bottom: 5rem;
+}
+
+.activity-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding-inline-start: 0;
+}
+
+.activity-list li {
+    padding: 4px 0;
+    text-align: center;
 }
 
 /* Dining Section */
@@ -543,6 +569,10 @@ article {
     padding-bottom: 0.75rem;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+.special_events-content {
+    margin-bottom: 5rem;
 }
 
 /*Sign in/up Section*/
