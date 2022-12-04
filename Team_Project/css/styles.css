@@ -77,6 +77,12 @@ p {
 
 /* Header Section */
 
+.header-other a:visited {
+    color: #000033;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
 header {
     overflow: hidden;
     width: 100%;
@@ -137,6 +143,85 @@ h3 {
     color: #0c3724;
 }
 
+.attraction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin: 2% 3%;
+}
+
+.activity-title {
+    font-family: 'Calibri', sans-serif;
+    margin-left: 1vw;
+    font-size: 32px;
+}
+
+.ul-activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 18px;
+}
+
+.mySlides1,
+.mySlides2 {
+    display: none;
+}
+
+.slideshow-container {
+    background-color: #98b5c8;
+    border-radius: 30px;
+    height: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.dot1,
+.dot2 {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.text {
+    color: #080000;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: auto;
+    ;
+    font-family: 'Calibri', sans-serif;
+}
+
+.image {
+    vertical-align: middle;
+    width: auto;
+}
+
 .attraction-container li {
     font-family: 'Calibri', sans-serif;
     font-weight: 400;
@@ -146,7 +231,7 @@ h3 {
 }
 
 .activity-card {
-    background-color: #f9dc5c;
+    background-color: #574c45;
     border-radius: 16px;
     padding: 20px;
     display: grid;
@@ -184,7 +269,7 @@ h3 {
 }
 
 .activity-card p {
-    color: black;
+    color: white;
     padding: 10px;
     white-space: normal;
 }
@@ -193,6 +278,10 @@ article {
     font-family: 'Calibri', sans-serif;
     font-weight: light;
     font-size: 14pt;
+}
+
+.attractions-content {
+    margin-bottom: 5rem;
 }
 
 /* Dining Section */
@@ -280,6 +369,7 @@ article {
 }
 
 .reservation-grid {
+    font-family: 'Calibri', sans-serif;
     margin: 28px 12px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -297,7 +387,7 @@ article {
 
 .hotel {
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: auto auto;
 }
 
 .room-name {
@@ -309,12 +399,37 @@ article {
     height: 16px;
 }
 
-.room-name h3 {
+.room-name h4 {
     display: inline;
 }
 
-.room-price img {
+.room-price {
     position: relative;
+}
+
+.room-price p {
+    position: absolute;
+    bottom: 2%;
+    left: 5vw;
+    color: white;
+    font-size: 25px;
+
+}
+
+.background-of-price {
+    position: absolute;
+    height: 15%;
+    bottom: 2%;
+    width: 100%;
+    background-color: #546d8394;
+
+}
+
+.dining-include {
+    left: 60%;
+    font-size: 18px;
+    color: white;
+
 }
 
 .room-text {
@@ -378,7 +493,96 @@ article {
     padding-bottom: 3rem;
 }
 
+/* Special Events Section */
+
+.special_events {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.special_events_txt_and_img {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.special_events_img {
+    margin-right: 3rem;
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+.special_events_txt {
+    text-align: justify;
+}
+
+.special_events_container h2 {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    size: 30pt;
+    color: #0c3724;
+}
+
+.special_events_container p {
+    color: #0c3724;
+}
+
+.special_events_table table {
+    border: solid 1.5px black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+.special_events_table th,
+.special_events_table tr,
+.special_events_table table td {
+    border: solid 2px #039c05;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/*Sign in/up Section*/
+
+.sign-in-up-form {
+    width: 360px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10vh;
+    font-family: 'Calibri', sans-serif;
+    background-color: #a3c3ce;
+
+}
+
+.sign-in-up-form h3 {
+    text-align: center;
+}
+
+#sign-in-btn,
+#sign-up-btn {
+    background-color: #76a1b1;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Calibri', sans-serif;
+    margin: 20px 40%;
+    width: 90px;
+    height: 50px;
+}
+
+.sign {
+    font-family: 'Calibri', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
 /* Footer Section */
+
+.sign-content {
+    margin-bottom: 5rem;
+}
 
 footer {
     position: absolute;
