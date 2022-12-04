@@ -81,6 +81,7 @@
                 price = 388.98;
             }
             var totalPrice = price * number_of_nights;
+            totalPrice = totalPrice.toFixed(2);
             var totalPriceString = "$ " + totalPrice;
             document.getElementById('price').innerText = totalPriceString;
         }
