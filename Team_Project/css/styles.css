@@ -77,12 +77,6 @@ p {
 
 /* Header Section */
 
-.header-other a:visited {
-    color: #000033;
-    font-size: 20pt;
-    font-weight: bold;
-}
-
 header {
     overflow: hidden;
     width: 100%;
