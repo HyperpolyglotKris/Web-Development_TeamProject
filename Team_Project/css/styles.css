@@ -146,7 +146,7 @@ h3 {
 }
 
 .activity-card {
-    background-color: #f9dc5c;
+    background-color: #574c45;
     border-radius: 16px;
     padding: 20px;
     display: grid;
@@ -184,7 +184,7 @@ h3 {
 }
 
 .activity-card p {
-    color: black;
+    color: white;
     padding: 10px;
     white-space: normal;
 }
@@ -310,7 +310,7 @@ article {
     height: 16px;
 }
 
-.room-name h3 {
+.room-name h4 {
     display: inline;
 }
 
@@ -462,7 +462,7 @@ article {
     width: 360px;
     margin: auto;
     padding: 10px;
-    margin-top: 10%;
+    margin-top: 10vh;
     font-family: 'Calibri', sans-serif;
     background-color: #a3c3ce;
 
@@ -490,6 +490,10 @@ article {
 }
 
 /* Footer Section */
+
+.sign-content {
+    margin-bottom: 5rem;
+}
 
 footer {
     position: absolute;

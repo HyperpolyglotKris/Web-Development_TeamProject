@@ -35,75 +35,79 @@
 </head>
 
 <body>
-    <header>
-        <img src="images/0-logo.png" />
-        <div class="header-middle">
-            <a href="home.html">Home</a>
-            <a href="attractions.html">Attractions</a>
-            <a href="dining.html">Dining</a>
-            <a href="reservation.html">Reservation</a>
-            <a id="active" href="special_events.html">Special Events</a>
-        </div>
-        <div class="header-other">
-            <a id="signin" href="sign_in.html">Sign In</a>
-            <a id="signup" href="sign_up.html">Sign Up</a>
-            <a id="language">EN/FR</a>
-        </div>
-    </header>
+    <div class="page-container">
+        <div class="sign-content">
+            <header>
+                <img src="images/0-logo.png" />
+                <div class="header-middle">
+                    <a href="home.html">Home</a>
+                    <a href="attractions.html">Attractions</a>
+                    <a href="dining.html">Dining</a>
+                    <a href="reservation.html">Reservation</a>
+                    <a id="active" href="special_events.html">Special Events</a>
+                </div>
+                <div class="header-other">
+                    <a id="signin" href="sign_in.html">Sign In</a>
+                    <a id="signup" href="sign_up.html">Sign Up</a>
+                    <a id="language">EN/FR</a>
+                </div>
+            </header>
 
-    <main class="sign-in-up">
-        <div class="sign-in-up-form">
-            <form id="sign-up" action="sign_in.html" onsubmit="return validateForm()">
-                <fieldset>
-                    <h3>Create your account</h3>
-                    <table>
-                        <!--row 1-->
-                        <tr>
-                            <td>
-                                <lable for="Email_Address">Email Address: </lable>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="email" id="email" name="email" size="40" maxlength="40">
-                            </td>
-                        </tr>
-                        <!--row 2-->
-                        <tr>
-                            <td>
-                                <lable for="password">Password:</lable>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="password" name="password" size="40" maxlength="40" height="52">
-                            </td>
-                        </tr>
-                        <!--row 3-->
-                        <tr>
-                            <td>
-                                <lable for="password">Confirm Password:</lable>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="rePassword" name="rePassword" size="40" maxlength="40"
-                                    height="52">
-                            </td>
-                        </tr>
-                    </table>
-                    <input type="submit" id="sign-up-btn" value="Sign up">
-                </fieldset>
-            </form>
+            <main class="sign-in-up">
+                <div class="sign-in-up-form">
+                    <form id="sign-up" action="sign_in.html" onsubmit="return validateForm()">
+                        <fieldset>
+                            <h3>Create your account</h3>
+                            <table>
+                                <!--row 1-->
+                                <tr>
+                                    <td>
+                                        <lable for="Email_Address">Email Address: </lable>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="email" id="email" name="email" size="40" maxlength="40">
+                                    </td>
+                                </tr>
+                                <!--row 2-->
+                                <tr>
+                                    <td>
+                                        <lable for="password">Password:</lable>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="password" name="password" size="40" maxlength="40"
+                                            height="52">
+                                    </td>
+                                </tr>
+                                <!--row 3-->
+                                <tr>
+                                    <td>
+                                        <lable for="password">Confirm Password:</lable>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="rePassword" name="rePassword" size="40" maxlength="40"
+                                            height="52">
+                                    </td>
+                                </tr>
+                            </table>
+                            <input type="submit" id="sign-up-btn" value="Sign up">
+                        </fieldset>
+                    </form>
+                </div>
+            </main>
         </div>
-    </main>
-
-    <footer>
-        <p>CustomerService@ccab.com</p>
-        <p>514 977 8686</p>
-        <p>2800, Chemin du Village, Tremblant, Canada J8E 1A4</p>
-        <p>Copyright © 2002 CuiteBunnyBay.com™. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>CustomerService@ccab.com</p>
+            <p>514 977 8686</p>
+            <p>2800, Chemin du Village, Tremblant, Canada J8E 1A4</p>
+            <p>Copyright © 2002 CuiteBunnyBay.com™. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
