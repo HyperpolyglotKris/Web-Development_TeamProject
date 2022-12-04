@@ -3,8 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Attractions</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+
+    </style>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        showSlides2();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides1");
+            let dots = document.getElementsByClassName("dot1");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+
+        function showSlides2() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides2");
+            let dots = document.getElementsByClassName("dot2");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides2, 4000); // Change image every 4 seconds
+        }
+    </script>
 </head>
 
 <body>
@@ -32,41 +77,96 @@
                 Chef’s kitchen toa picnic zone.</p>
         </div>
 
-        <div class="attraction-container">
-            <div class="attraction">
-                <h3>Attractions for Kids</h3>
-                <ul>
-                    <li>The Kids’ SportZone</li>
-                    <li>Bunny Water Park</li>
-                    <li>The Magic</li>
-                </ul>
-                <div class="activity-card">
-                    <img src="images/2-The Kids’ SportZone.jpeg" />
-                    <p>Let your little ones be active with our SportZone. It offers a variety of field games, including
-                        basketball,soccer, American football.</p>
+        <div class="attraction-grid">
+            <div class="attractions">
+                <div class="activity-list">
+                    <h3 class="activity-title">Attractions for Kids</h3>
+                    <ul class="ul-activities">
+                        <li>The Kids’ SportZone</li>
+                        <li>Bunny Water Park</li>
+                        <li>The Magic</li>
+                    </ul>
+                </div>
+                <div class="slideshow-container">
+                    <div class="mySlides1 fade">
+                        <img class="image" src="images/2-The Kids’ SportZone.jpeg" style="width:50%">
+                        <div class="text"><b>The Kids’ SportZone</b><br><br>Let your little ones be active with our
+                            SportZone. It offers a variety of field games, including basketball, soccer, American
+                            football.
+                        </div>
+                    </div>
+                    <div class="mySlides1 fade">
+                        <img class="image" src="images/2-Bunny Water Park.jpeg" style="width:50%">
+                        <div class="text"><b>Bunny Water Park</b><br><br>Relax and have fun in our newly built water
+                            park.
+                            There is a water playground with slides, a wading pool, a shaded section, and many more.
+                        </div>
+                    </div>
+                    <div class="mySlides1 fade">
+                        <img class="image" src="images/2-The Magic.jpg" style="width:50%">
+                        <div class="text"><b>The Magice</b><br><br>Let your kids create and thrive. The room offers
+                            plenty
+                            of fun art activities to boost kids’ creativity. Parents are welcome to join as well.</div>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot1"></span>
+                    <span class="dot1"></span>
+                    <span class="dot1"></span>
                 </div>
             </div>
-            <div class="attraction">
-                <h3>Attractions for Family</h3>
-                <ul>
-                    <li>Alica’s Kitchen</li>
-                    <li>Bunny Resort Trail</li>
-                    <li>Bunny Garden</li>
-                </ul>
-                <div class="activity-card">
-                    <img src="images/2-Alica’s Kitchen.jpg" />
-                    <p>Learn how to cook with our ChefAlica in a very modern, well-equipped, and kid-friendly kitchen.
-                    </p>
+
+            <div class="attractions">
+                <div class="activity-list">
+                    <h3 class="activity-title">Attractions for Family</h3>
+                    <ul class="ul-activities">
+                        <li>Alica’s Kitchen</li>
+                        <li>Bunny Resort Trail</li>
+                        <li>Bunny Garden</li>
+                    </ul>
+                </div>
+
+                <div class="slideshow-container">
+                    <div class="mySlides2 fade">
+                        <img class="image" src="images/2-Alica’s Kitchen.jpg" style="width:50%">
+                        <div class="text"><b>Alica’s Kitchen</b><br><br>Learn how to cook with our Chef Alica in a very
+                            modern, well-equipped, and
+                            kid-friendly kitchen.</div>
+                    </div>
+                    <div class="mySlides2 fade">
+                        <img class="image" src="images/2-Bunny Resort Trail.jpg" style="width:50%">
+                        <div class="text"><b>Bunny Resort Trail</b><br><br>Spend some time in nature by exploring the
+                            amazing
+                            <a class="link-tremblant" href="https://www.mont-tremblant.ca/">Mont-Tremblant National
+                                Park</a> on foot or by bicycles or even skiting with equipment provided free at the
+                            resort.
+                        </div>
+                    </div>
+                    <div class="mySlides2 fade">
+
+                        <img class="image" src="images/2-Bunny Garden.jpeg" style="width:50%">
+                        <div class="text"><b>Bunny Garden</b><br><br>Have a wonderful time with your family in our
+                            beautiful garden. We have plenty picnic areas. Fire pits and barbecue stations are available
+                            on demand.</div>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot2"></span>
+                    <span class="dot2"></span>
+                    <span class="dot2"></span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer>
-            <p>CustomerService@ccab.com</p>
-            <p>514 977 8686</p>
-            <p>2800, Chemin du Village, Tremblant, Canada J8E 1A4</p>
-            <p>Copyright © 2002 CuiteBunnyBay.com™. All rights reserved.</p>
-        </footer>
+    <footer>
+        <p>CustomerService@ccab.com</p>
+        <p>514 977 8686</p>
+        <p>2800, Chemin du Village, Tremblant, Canada J8E 1A4</p>
+        <p>Copyright © 2002 CuiteBunnyBay.com™. All rights reserved.</p>
+    </footer>
     </div>
 </body>
 

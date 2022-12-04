@@ -77,6 +77,12 @@ p {
 
 /* Header Section */
 
+.header-other a:visited {
+    color: #000033;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
 header {
     overflow: hidden;
     width: 100%;
@@ -135,6 +141,85 @@ h3 {
     font-weight: 200;
     font-size: 24pt;
     color: #0c3724;
+}
+
+.attraction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin: 2% 3%;
+}
+
+.activity-title {
+    font-family: 'Calibri', sans-serif;
+    margin-left: 1vw;
+    font-size: 32px;
+}
+
+.ul-activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 18px;
+}
+
+.mySlides1,
+.mySlides2 {
+    display: none;
+}
+
+.slideshow-container {
+    background-color: #98b5c8;
+    border-radius: 30px;
+    height: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.dot1,
+.dot2 {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.text {
+    color: #080000;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: auto;
+    ;
+    font-family: 'Calibri', sans-serif;
+}
+
+.image {
+    vertical-align: middle;
+    width: auto;
 }
 
 .attraction-container li {
