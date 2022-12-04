@@ -13,17 +13,17 @@
             let z = document.forms["sign-up"]["rePassword"].value;
 
             if (x == "") {
-                alert("Pls enter your email address!");
+                alert("Please enter an email address!");
                 return false;
 
             } else if (y == "") {
-                alert("Pls enter your password!");
+                alert("Please enter a password!");
                 return false;
             } else if (z == "") {
-                alert("Pls re-enter your password!");
+                alert("Please re-enter your password!");
                 return false;
             } else if (z != y) {
-                alert("Pls re-enter your password correctly!");
+                alert("Passwords do not match");
                 return false;
             }
             else {
