@@ -69,6 +69,12 @@ a:visited {
     color: #000033;
 }
 
+.header-other a:visited {
+    color: #000033;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
 h1,
 h2 {
     font-family: 'Bradley Hand ITC', sans-serif;
@@ -126,70 +132,89 @@ p {
     color: #0c3724;
 }
 
-h3 {
-    font-family: 'Calibri', sans-serif;
-    font-weight: 200;
-    font-size: 24pt;
-    color: #0c3724;
-}
-
-.attraction-container li {
-    font-family: 'Calibri', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    padding-right: 4px;
-    color: #0c3724;
-}
-
-.activity-card {
-    background-color: #6184db;
-    border-radius: 16px;
-    padding: 20px;
+.attraction-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
+    gap: 3vw;
+    margin: 2% 3%;
 }
 
-.attraction-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0px 4vw;
-    margin-bottom: 5rem;
-    column-gap: 4vw;
+.activity-title {
+    font-family: 'Calibri', sans-serif;
+    margin-left: 1vw;
+    font-size: 32px;
 }
 
-.attraction-container ul {
+.ul-activities {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-inline-start: 0;
-    padding-inline-start: 20px;
-    list-style-position: inside;
-}
-
-.activity-card img {
-    object-fit: cover;
-    height: 26vh;
-    width: 20vw;
-}
-
-.attraction * {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.activity-card p {
-    color: #ffffff;
-    padding: 10px;
-    white-space: normal;
-}
-
-article {
     font-family: 'Calibri', sans-serif;
-    font-weight: light;
-    font-size: 14pt;
+    font-size: 18px;
 }
+
+.mySlides1,
+.mySlides2 {
+    display: none;
+}
+
+.slideshow-container {
+    background-color: #98b5c8;
+    border-radius: 30px;
+    padding: 20px;
+    height: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.image {
+    vertical-align: middle;
+    width: auto;
+}
+
+.text {
+    color: #080000;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: auto;
+    ;
+    font-family: 'Calibri', sans-serif;
+}
+
+.link-tremblant {}
+
+.dot1,
+.dot2 {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 
 /* Dining Section */
 
@@ -310,7 +335,7 @@ article {
     display: inline;
 }
 
-.room-price{
+.room-price {
     position: relative;
 }
 
@@ -322,21 +347,23 @@ article {
     left: 5vw;
     color: white;
     font-size: 25px;
-    
+
 }
-.background-of-price{
+
+.background-of-price {
     position: absolute;
     height: 15%;
     bottom: 2%;
     width: 100%;
     background-color: #546d8394;
-    
+
 }
+
 .dining-include {
     left: 60%;
     font-size: 18px;
     color: white;
-  
+
 }
 
 .form-grid {
@@ -351,7 +378,7 @@ article {
     align-content: center;
     margin: auto;
     width: 60vw;
-   
+
     border: 1px solid black;
     margin-bottom: 20px;
 }
@@ -378,34 +405,38 @@ article {
     background-color: #546d83;
     color: #ffffff;
     padding: 8px;
-    border-radius:6px;
+    border-radius: 6px;
     box-shadow: 6px 4px 4px #131d25;
 }
 
 /*Sign in/up Section*/
 
-.sign-in-up-form{
+.sign-in-up-form {
     width: 360px;
     margin: auto;
     padding: 10px;
     margin-top: 10%;
     font-family: 'Calibri', sans-serif;
-    background-color:  #a3c3ce;
-  
+    background-color: #a3c3ce;
+
 }
 
-.sign-in-up-form h3{
+.sign-in-up-form h3 {
     text-align: center;
 }
-#sign-in-btn, #sign-up-btn{
+
+#sign-in-btn,
+#sign-up-btn {
     background-color: #76a1b1;
-    border:none;
+    border: none;
     border-radius: 4px;
     font-family: 'Calibri', sans-serif;
-    margin: 20px 40%; 
-    width: 90px; height: 50px; 
+    margin: 20px 40%;
+    width: 90px;
+    height: 50px;
 }
-.sign{
+
+.sign {
     font-family: 'Calibri', sans-serif;
     font-weight: lighter;
     text-align: center;
