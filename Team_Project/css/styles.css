@@ -11,7 +11,7 @@ body {
 /* General Section */
 
 .background-image {
-    background-image: url(/Team_Project/images/1-home.jpeg);
+    background-image: url(/Team_Project/images/1-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -631,4 +631,9 @@ footer p {
     font-size: 10pt;
     color: #6d8a92;
     text-align: center;
+}
+
+.email_link{
+    color: #6d8a92;
+    font-family: 'Calibri', sans-serif;
 }
