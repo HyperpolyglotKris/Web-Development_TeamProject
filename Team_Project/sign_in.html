@@ -31,16 +31,16 @@
     <div class="page-container">
         <div class="sign-content">
             <header>
-                <img src="images/0-logo.png" />
+                <img src="images/0-logo.png" alt="Cutie Bunny Logo" />
                 <div class="header-middle">
-                    <a href="home.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="attractions.html">Attractions</a>
                     <a href="dining.html">Dining</a>
                     <a href="reservation.html">Reservation</a>
-                    <a id="active" href="special_events.html">Special Events</a>
+                    <a href="special_events.html">Special Events</a>
                 </div>
                 <div class="header-other">
-                    <a id="signin" href="sign_in.html">Sign In</a>
+                    <a id="active" id="signin" href="sign_in.html">Sign In</a>
                     <a id="signup" href="sign_up.html">Sign Up</a>
                     <a id="language">EN/FR</a>
                 </div>
@@ -71,12 +71,14 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="text" id="password" name="password" size="40" maxlength="40"
+                                        <input type="password" id="password" name="password" size="40" maxlength="40"
                                             height="52">
                                     </td>
                                 </tr>
                             </table>
-                            <input type="submit" id="sign-in-btn" value="Sign in">
+                            <div class="sign-in-up-button">
+                                <input type="submit" id="sign-in-btn" value="Sign in">
+                            </div>
                         </fieldset>
                     </form>
                 </div>
