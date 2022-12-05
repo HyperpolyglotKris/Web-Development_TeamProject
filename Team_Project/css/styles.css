@@ -510,19 +510,29 @@ article {
 }
 
 .special_events_txt_and_img {
-    display: flex;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+
     margin-bottom: 3rem;
 }
 
 .special_events_img {
-    margin-right: 3rem;
-    width: 30%;
-    height: auto;
+    max-width: 30vw;
+    max-height: 100%;
     float: left;
+    align-self: center;
+    justify-self: center;
+    object-fit: cover;
 }
 
 .special_events_txt {
+    max-width: 100%;
     text-align: justify;
+    align-self: center;
+    margin-block-end: 0;
+    margin-block-start: 0;
 }
 
 .special_events_container h2 {
@@ -536,6 +546,7 @@ article {
 }
 
 .special_events_table table {
+    width: 100%;
     border: solid 1.5px black;
     border-collapse: collapse;
     text-align: center;
@@ -549,8 +560,8 @@ article {
     border: solid 2px #039c05;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .special_events-content {
@@ -668,13 +679,21 @@ footer p {
     }
 
     .restaurant img {
-        width: 35vw;
+        height: 30vh;
     }
 
     /* Events */
 
     .special_events_container {
         margin: 0 12px;
+    }
+
+    .special_events_txt_and_img {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .special_events_img {
+        max-width: 100%;
     }
 
     /* Sign Pages Footer */
@@ -692,7 +711,6 @@ footer p {
 
     .header-middle {
         grid-template-columns: 1fr;
-        gap: 1vh;
     }
 
     header img {
@@ -773,6 +791,20 @@ footer p {
 
     .room-price p {
         left: 20vw;
+    }
+
+    /* Special */
+
+    .special_events_txt_and_img {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .special_events_img {
+        max-width: 100%;
+    }
+
+    .special_events-content {
+        margin-bottom: 8rem;
     }
 
     /* Sign Pages Footer */
