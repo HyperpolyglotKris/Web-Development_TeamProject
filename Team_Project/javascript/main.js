@@ -76,45 +76,56 @@ function displayTotalPrice() {
 
 // Function for Validating Sign-Up Form
 function validateSignUp() {
-    let x = document.forms["sign-up"]["email"].value;
-    let y = document.forms["sign-up"]["password"].value;
-    let z = document.forms["sign-up"]["rePassword"].value;
+    let emailSignUp = document.getElementById("email-signup").value;
+    let passwordSignUp = document.getElementById("password-signup").value;
+    let rePasswordSignUp = document.getElementById("rePassword-signup").value;
 
-    if (x == "") {
+    if (emailSignUp == "") {
         alert("Please enter an email address!");
         return false;
-
-    } else if (y == "") {
+    } else if (passwordSignUp == "") {
         alert("Please enter a password!");
         return false;
-    } else if (z == "") {
+    } else if (rePasswordSignUp == "") {
         alert("Please re-enter your password!");
         return false;
-    } else if (z != y) {
-        alert("Passwords do not match");
+    } else if (passwordSignUp != rePasswordSignUp) {
+        alert("Passwords do not match!");
+        return false;
+    } else if (passwordSignUp.length < 6) {
+        alert("Password should be at least 6 charactors long!");
         return false;
     }
-    else {
-        alert("You have sucessfully signed up! Now please sign in with your email address and password!");
+
+    let record = window.localStorage.getItem(JSON.stringify(emailSignUp));
+
+    if (record == null) {
+        window.localStorage.setItem(JSON.stringify(emailSignUp), passwordSignUp);
+        alert("You have signed up successfully. Please sign in now.");
+        return true;
+    } else {
+        alert("Email belongs to existing account. Sign-In Instead.");
         return true;
     }
 }
 
 // Function for Validating Sign-In Form
 function validateSignIn() {
-    let x = document.forms["sign-in"]["email"].value;
-    let y = document.forms["sign-in"]["password"].value;
+    let email = document.getElementById("email-signin").value;
+    let password = document.getElementById("password-signin").value;
+    let record = window.localStorage.getItem(JSON.stringify(email));
 
-    if (x == "") {
+    if (email == "") {
         alert("Please enter your email address!");
         return false;
-
-    } else if (y == "") {
+    } else if (password == "") {
         alert("Please enter your password!");
         return false;
-    }
-    else {
-        alert("You have sucessfully signed in!");
+    } else if (password != record) {
+        alert("Incorrect password. Try-Again.");
+        return false;
+    } else {
+        alert("Welcome Back to Cuite Bunny Bay!");
         return true;
     }
 }
@@ -157,4 +168,32 @@ function showSlides2() {
     slides[slideIndex2 - 1].style.display = "block";
     dots[slideIndex2 - 1].className += " active";
     setTimeout(showSlides2, 6000); // Change image every 6 seconds
+}
+
+// Functions to Retrive, Remove or Clear -> Sign-In page
+function retrieveRecords() {
+    var key = document.getElementsById('retrieveKey').value;
+    var records = window.localStorage.getItem(key);
+    var paragraph = document.createElement("p");
+    var infor = document.createTextNode(records);
+    paragraph.appendChild(infor);
+    var element = document.getElementsById("retrieve");
+    element.appendChild(paragraph);
+}
+
+function removeItem() {
+    var key = document.getElementById('removeKey').value;
+    localStorage.removeItem(JSON.stringify(key))
+    console.log("remove items");
+}
+
+function clearStorage() {
+    localStorage.clear()
+    console.log("clear records");
+}
+
+window.onload = function () {
+    document.getElementsById("retrieveButton").onclick = retrieveRecords;
+    document.getElementById("clearButton").onclick = clearStorage;
+    document.getElementById("removeButton").onclick = removeItem;
 }
