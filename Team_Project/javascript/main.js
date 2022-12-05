@@ -1,3 +1,5 @@
+
+// Function for Validating Reservation Form
 function validateReservation() {
     let first_name = document.forms["hotel_reservation"]["first_name"].value;
     let last_name = document.forms["hotel_reservation"]["last_name"].value;
@@ -60,6 +62,7 @@ function validateReservation() {
     }
 }
 
+// Function for Displaying the Total Price of Reservation
 function displayTotalPrice() {
     var price = 0.00;
     let radios = document.querySelectorAll('input[type="radio"]:checked');
@@ -76,4 +79,49 @@ function displayTotalPrice() {
     totalPrice = totalPrice.toFixed(2);
     var totalPriceString = "$ " + totalPrice;
     document.getElementById('price').innerText = totalPriceString;
+}
+
+// Function for Validating Sign-Up Form
+function validateSignUp() {
+    let x = document.forms["sign-up"]["email"].value;
+    let y = document.forms["sign-up"]["password"].value;
+    let z = document.forms["sign-up"]["rePassword"].value;
+
+    if (x == "") {
+        alert("Please enter an email address!");
+        return false;
+
+    } else if (y == "") {
+        alert("Please enter a password!");
+        return false;
+    } else if (z == "") {
+        alert("Please re-enter your password!");
+        return false;
+    } else if (z != y) {
+        alert("Passwords do not match");
+        return false;
+    }
+    else {
+        alert("You have sucessfully signed up! Now please sign in with your email address and password!");
+        return true;
+    }
+}
+
+// Function for Validating Sign-In Form
+function validateSignIn() {
+    let x = document.forms["sign-in"]["email"].value;
+    let y = document.forms["sign-in"]["password"].value;
+
+    if (x == "") {
+        alert("Please enter your email address!");
+        return false;
+
+    } else if (y == "") {
+        alert("Please enter your password!");
+        return false;
+    }
+    else {
+        alert("You have sucessfully signed in!");
+        return true;
+    }
 }

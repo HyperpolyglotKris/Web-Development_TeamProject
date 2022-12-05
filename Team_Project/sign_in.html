@@ -5,26 +5,7 @@
     <meta charset="UTF-8">
     <title>Sign in</title>
     <link rel="stylesheet" href="css/styles.css">
-
-    <script>
-        function validateForm() {
-            let x = document.forms["sign-in"]["email"].value;
-            let y = document.forms["sign-in"]["password"].value;
-
-            if (x == "") {
-                alert("Please enter your email address!");
-                return false;
-
-            } else if (y == "") {
-                alert("Please enter your password!");
-                return false;
-            }
-            else {
-                alert("You have sucessfully signed in!");
-                return true;
-            }
-        }
-    </script>
+    <script src="/Team_Project/javascript/main.js"></script>
 </head>
 
 <body>
@@ -48,7 +29,7 @@
 
             <main class="sign-in-up">
                 <div class="sign-in-up-form">
-                    <form id="sign-in" name="sign-in" action="home.html" onsubmit="return validateForm()">
+                    <form id="sign-in" name="sign-in" action="index.html" onsubmit="return validateSignIn()">
                         <fieldset>
                             <h3>Sign in to your account</h3>
                             <table>
