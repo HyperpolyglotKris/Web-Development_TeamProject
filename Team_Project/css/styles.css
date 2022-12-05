@@ -11,7 +11,7 @@ body {
 /* General Section */
 
 .background-image {
-    background-image: url(/Team_Project/images/1-home.jpeg);
+    background-image: url(/Team_Project/images/1-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -420,10 +420,9 @@ article {
 .room-price p {
     position: absolute;
     bottom: 2%;
-    left: 5vw;
+    left: 20%;
     color: white;
     font-size: 25px;
-
 }
 
 .background-of-price {
@@ -432,14 +431,6 @@ article {
     bottom: 2%;
     width: 100%;
     background-color: #546d8394;
-
-}
-
-.dining-include {
-    left: 60%;
-    font-size: 18px;
-    color: white;
-
 }
 
 .room-text {
@@ -564,6 +555,10 @@ article {
     margin-bottom: 5rem;
 }
 
+.special_events_container {
+    margin: 0 2vw;
+}
+
 /*Sign in/up Section*/
 
 .sign-in-up-form {
@@ -602,6 +597,11 @@ article {
 }
 
 /* Footer Section */
+
+.email_link {
+    color: #6d8a92;
+    font-family: 'Calibri', sans-serif;
+}
 
 .sign-content {
     margin-bottom: 5rem;
