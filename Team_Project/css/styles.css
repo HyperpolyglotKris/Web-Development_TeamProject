@@ -31,7 +31,6 @@ a:link,
 a:visited {
     text-decoration: none;
     font-size: 14pt;
-    color: #000033;
 }
 
 h1,
@@ -227,14 +226,6 @@ h3 {
     width: auto;
 }
 
-.attraction-container li {
-    font-family: 'Calibri', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    padding-right: 4px;
-    color: #0c3724;
-}
-
 .activity-card {
     background-color: #574c45;
     border-radius: 16px;
@@ -267,15 +258,6 @@ h3 {
     width: 20vw;
 }
 
-.activity-list li {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    box-shadow: 2px 1px 1px black;
-    border: 1px solid black;
-    border-radius: 12px;
-}
-
 .activity-card p {
     color: white;
     padding: 10px;
@@ -300,8 +282,19 @@ article {
 }
 
 .activity-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 2px 1px 1px black;
+    border: 1px solid black;
+    border-radius: 12px;
     padding: 4px 0;
     text-align: center;
+}
+
+.list-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* Dining Section */
