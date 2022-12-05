@@ -365,6 +365,14 @@ article {
     color: #ffffff;
 }
 
+.restaurant img:hover {
+    box-shadow: 0 0 2px 1px white;
+}
+
+.restaurant a {
+    margin: 0;
+}
+
 /* Reservation Section */
 
 .reservation h2 {
