@@ -69,7 +69,7 @@ p {
 }
 
 .content-wrap {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     display: grid;
     grid-template-rows: 4fr 1fr;
 }
@@ -503,8 +503,10 @@ article {
 
 .special_events {
     display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
+    margin: 0 2vw;
 }
 
 .special_events_txt_and_img {
@@ -556,7 +558,7 @@ article {
 }
 
 .special_events_container {
-    margin: 0 2vw;
+    margin: 0 auto;
 }
 
 /*Sign in/up Section*/
@@ -629,8 +631,9 @@ footer p {
 
 /* Small devices (tablets, 600.8px and above) */
 @media screen and (max-width: 991.8px) and (min-width: 600.8px) {
+
     header {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 3fr;
     }
 
     .header-other {
@@ -668,10 +671,15 @@ footer p {
         width: 35vw;
     }
 
+    /* Events */
+
+    .special_events_container {
+        margin: 0 12px;
+    }
 
     /* Sign Pages Footer */
     .sign-content {
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
 
 }
