@@ -14,15 +14,6 @@ function validateReservation() {
     // Get today's date
     let currentDate = new Date().toJSON().slice(0, 10);
 
-    console.log(currentDate);
-    console.log(adults);
-    console.log(children);
-    console.log(number_of_nights);
-    console.log(selected_room);
-    console.log(currentDate);
-    console.log(check_in_date);
-    console.log(total_price);
-
     if (first_name == "") {
         alert("Please enter your first name!");
         return false;
@@ -47,7 +38,9 @@ function validateReservation() {
     } else if (selected_room == null) {
         alert("Please select a room type!");
         return false;
-    } else {
+    }
+
+    else {
         var room_type = "";
         if (selected_room == 0) {
             room_type = "Room With a Pool";
@@ -124,4 +117,44 @@ function validateSignIn() {
         alert("You have sucessfully signed in!");
         return true;
     }
+}
+
+// Function for Attractions Page Slideshow
+let slideIndex1 = 0;
+let slideIndex2 = 0;
+showSlides();
+showSlides2();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides1");
+    let dots = document.getElementsByClassName("dot1");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex1++;
+    if (slideIndex1 > slides.length) { slideIndex1 = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex1 - 1].style.display = "block";
+    dots[slideIndex1 - 1].className += " active";
+    setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+
+function showSlides2() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides2");
+    let dots = document.getElementsByClassName("dot2");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex2++;
+    if (slideIndex2 > slides.length) { slideIndex2 = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].className += " active";
+    setTimeout(showSlides2, 6000); // Change image every 6 seconds
 }
