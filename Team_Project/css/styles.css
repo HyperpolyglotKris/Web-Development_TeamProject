@@ -8,37 +8,12 @@ body {
     min-height: 100vh;
 }
 
+/* General Section */
+
 .background-image {
     background-image: url(/Team_Project/images/1-home.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-header {
-    overflow: hidden;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 5fr 2fr;
-    justify-content: center;
-    align-content: center;
-}
-
-header img {
-    padding-left: 2vw;
-    padding-top: 2vh;
-    height: 64px;
-}
-
-.header-other {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: flex-end;
-}
-
-.header-middle {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
 }
 
 #active {
@@ -52,21 +27,10 @@ a {
     text-align: center;
 }
 
-.header-other a {
-    font-family: 'Bradley Hand ITC', sans-serif;
-    font-size: 11pt;
-    color: #008489
-}
-
-.header-middle a {
-    color: #000033;
-}
-
 a:link,
 a:visited {
     text-decoration: none;
     font-size: 14pt;
-    color: #000033;
 }
 
 .header-other a:visited {
@@ -116,19 +80,65 @@ p {
     grid-template-rows: 4fr 1fr;
 }
 
+/* Header Section */
+
+header {
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    justify-content: center;
+    align-content: center;
+}
+
+header img {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    height: 64px;
+}
+
+.header-other {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+}
+
+.header-middle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.header-other a {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    font-size: 11pt;
+    color: #008489
+}
+
+.header-middle a {
+    color: #000033;
+}
+
 /* Attraction Page Section */
-.attraction-content {
+.attraction-text {
     margin: 0px 4vw;
 }
 
-.attraction-content h2 {
+.attraction-text h2 {
     font-family: 'Bradley Hand ITC', sans-serif;
     color: #0c3724;
 }
 
-.attraction-content p {
+.attraction-text p {
     font-family: 'Calibri', sans-serif;
     font-size: 14pt;
+    color: #0c3724;
+}
+
+h3 {
+    font-family: 'Calibri', sans-serif;
+    font-weight: 200;
+    font-size: 24pt;
     color: #0c3724;
 }
 
@@ -148,27 +158,61 @@ p {
 .ul-activities {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    font-family: 'Calibri', sans-serif;
     font-size: 18px;
 }
 
 .mySlides1,
 .mySlides2 {
     display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .slideshow-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #98b5c8;
     border-radius: 30px;
-    padding: 20px;
-    height: fit-content;
+    height: 300px;
     position: relative;
     margin: auto;
 }
 
-.image {
-    vertical-align: middle;
-    width: auto;
+.slideshow-container img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.dot1,
+.dot2 {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 .text {
@@ -183,38 +227,78 @@ p {
     font-family: 'Calibri', sans-serif;
 }
 
-.link-tremblant {}
-
-.dot1,
-.dot2 {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.image {
+    vertical-align: middle;
+    width: auto;
 }
 
-.active {
-    background-color: #717171;
+.activity-card {
+    background-color: #574c45;
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin: 2% 3%;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.activity-title {
+    font-family: 'Calibri', sans-serif;
+    margin-left: 1vw;
+    font-size: 32px;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
+.ul-activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-inline-start: 0;
+    padding-inline-start: 20px;
+    list-style-position: inside;
 }
 
+.activity-card img {
+    object-fit: cover;
+    height: 26vh;
+    width: 20vw;
+}
+
+.activity-card p {
+    color: white;
+    padding: 10px;
+    white-space: normal;
+}
+
+article {
+    font-family: 'Calibri', sans-serif;
+    font-size: 18px;
+}
+
+.attractions-content {
+    margin-bottom: 5rem;
+}
+
+.activity-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding-inline-start: 0;
+}
+
+.activity-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 2px 1px 1px black;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 4px 0;
+    text-align: center;
+}
+
+.list-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 /* Dining Section */
 
@@ -297,7 +381,7 @@ p {
     font-family: 'Calibri', sans-serif;
     font-size: 12pt;
     font-weight: 600px;
-    margin: 20px;
+    margin: 0 2vw;
 }
 
 .reservation-grid {
@@ -319,7 +403,7 @@ p {
 
 .hotel {
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: auto auto;
 }
 
 .room-name {
@@ -338,8 +422,6 @@ p {
 .room-price {
     position: relative;
 }
-
-.room-price img {}
 
 .room-price p {
     position: absolute;
@@ -366,8 +448,20 @@ p {
 
 }
 
-.form-grid {
-    font-family: 'Calibri', sans-serif;
+.room-text {
+    position: relative;
+}
+
+.room-text h4 {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Lobster', cursive;
+}
+
+.reservation-form {
+    display: grid;
+    width: min-content;
     background-color: white;
     padding: 12px;
     outline-color: #131d25;
@@ -377,8 +471,7 @@ p {
     box-shadow: 6px 4px 4px #131d25;
     align-content: center;
     margin: auto;
-    width: 60vw;
-
+    place-items: center;
     border: 1px solid black;
     margin-bottom: 20px;
 }
@@ -399,19 +492,82 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    background-color: #546d83;
-    color: #ffffff;
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: 6px 4px 4px #131d25;
+    background-color: lightgray;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 6px 4px 4px black;
 }
 
 .submit-button {
-    background-color: #546d83;
-    color: #ffffff;
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: 6px 4px 4px #131d25;
+    background-color: lightgray;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 6px 4px 4px black;
+}
+
+.reservation-content {
+    padding-bottom: 3rem;
+}
+
+.reservation-form tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Special Events Section */
+
+.special_events {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.special_events_txt_and_img {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.special_events_img {
+    margin-right: 3rem;
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+.special_events_txt {
+    text-align: justify;
+}
+
+.special_events_container h2 {
+    font-family: 'Bradley Hand ITC', sans-serif;
+    size: 30pt;
+    color: #0c3724;
+}
+
+.special_events_container p {
+    color: #0c3724;
+}
+
+.special_events_table table {
+    border: solid 1.5px black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+.special_events_table th,
+.special_events_table tr,
+.special_events_table table td {
+    border: solid 2px #039c05;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.special_events-content {
+    margin-bottom: 5rem;
 }
 
 /*Sign in/up Section*/
@@ -420,7 +576,7 @@ p {
     width: 360px;
     margin: auto;
     padding: 10px;
-    margin-top: 10%;
+    margin-top: 10vh;
     font-family: 'Calibri', sans-serif;
     background-color: #a3c3ce;
 
@@ -430,13 +586,17 @@ p {
     text-align: center;
 }
 
+.sign-in-up-button {
+    text-align: center;
+}
+
 #sign-in-btn,
 #sign-up-btn {
     background-color: #76a1b1;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     font-family: 'Calibri', sans-serif;
-    margin: 20px 40%;
+    margin-top: 24px;
     width: 90px;
     height: 50px;
 }
@@ -448,6 +608,10 @@ p {
 }
 
 /* Footer Section */
+
+.sign-content {
+    margin-bottom: 5rem;
+}
 
 footer {
     position: absolute;

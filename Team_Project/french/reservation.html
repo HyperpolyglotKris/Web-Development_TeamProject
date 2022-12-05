@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Reservation</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/Team_Project/css/styles.css">
     <script src="/Team_Project/javascript/main.js"></script>
 </head>
 
@@ -12,27 +12,27 @@
     <div class="page-container">
         <div class="reservation-content">
             <header>
-                <img src="images/0-logo.png" alt="Cutie Bunny Logo" />
+                <img src="/Team_Project/images/0-logo.png" alt="Cutie Bunny Logo" />
                 <div class="header-middle">
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Accueil</a>
                     <a href="attractions.html">Attractions</a>
-                    <a href="dining.html">Dining</a>
-                    <a id="active" href="reservation.html">Reservation</a>
-                    <a href="special_events.html">Special Events</a>
+                    <a href="dining.html">Dîner</a>
+                    <a id="active" href="reservation.html">Réservation</a>
+                    <a href="special_events.html">Évennements Spéciaux</a>
                 </div>
                 <div class="header-other">
-                    <a id="signin" href="sign_in.html">Sign In</a>
-                    <a id="signup" href="sign_up.html">Sign Up</a>
-                    <a id="language" href="french/reservation.html">EN/FR</a>
+                    <a id="signin" href="sign_in.html">Se connecter</a>
+                    <a id="signup" href="sign_up.html">S'enregistrer</a>
+                    <a id="language" href="/Team_Project/reservation.html">EN/FR</a>
                 </div>
             </header>
 
             <div class="reservation">
-                <h2>Plan Your Stay at Cutie Bunny Bay</h2>
-                <p>Cutie Bunny, Mont Tremblant's opulent hotel rooms and suites combine classic style
-                    with contemporary convenience to provide an experience that goes above and beyond
-                    the ordinary. Take in the refinement of our hotel as you peek out at the beautiful view
-                    surrounding you during all seasons and all kinds of weather.</p>
+                <h2>Planifiez votre séjour chez Cutie Bunny Bay</h2>
+                <p>Cutie Bunny, les somptueuses chambres et suites de l'hôtel Mont Tremblant allient le style classique
+                    et le confort contemporain pour offrir une expérience qui dépasse l'ordinaire. Admirez le
+                    raffinement de notre hôtel en admirant la magnifique vue qui vous entoure en toutes saisons et en
+                    toutes conditions météorologiques.</p>
             </div>
 
             <div class="reservation-grid">
@@ -40,12 +40,12 @@
                     <div class="hotel">
                         <div class="room-name"> <input type="radio" id="room-pool" name="hotel" value="0"
                                 onchange="displayTotalPrice()">
-                            <h4>Room With A Pool</h4>
+                            <h4>Chambre avec une Piscine</h4>
                         </div>
                         <div class="room-price">
                             <rect class="background-of-price"></rect>
-                            <img src="images/4-pool.jpg" alt="Room With A Pool Picture">
-                            <p>$466.99/Night <span class="dining-include">*Dining included</span></p>
+                            <img src="/Team_Project/images/4-pool.jpg" alt="Room With A Pool Picture">
+                            <p>$466.99/Nuit <span class="dining-include">*Dîner inclus</span></p>
 
                         </div>
                     </div>
@@ -54,12 +54,12 @@
                     <div class="hotel">
                         <div class="room-name"> <input type="radio" id="room-suite" name="hotel" value="1"
                                 onchange="displayTotalPrice()">
-                            <h4>Suite</h4>
+                            <h4> Chambre 'Suite'</h4>
                         </div>
                         <div class="room-price">
                             <rect class="background-of-price"></rect>
-                            <img src="images/4-suit.jpg" alt="Suite Picture">
-                            <p>$422.88/Night <span class="dining-include">*Dining included</span></p>
+                            <img src="/Team_Project/images/4-suit.jpg" alt="Suite Picture">
+                            <p>$422.88/Nuit <span class="dining-include">*Dîner inclus</span></p>
 
                         </div>
                     </div>
@@ -68,12 +68,12 @@
                     <div class="hotel">
                         <div class="room-name"> <input type="radio" id="room-double" name="hotel" value="2"
                                 onchange="displayTotalPrice()">
-                            <h4>Two Beds Room</h4>
+                            <h4>Chambre à Deux Lits</h4>
                         </div>
                         <div class="room-price">
                             <rect class="background-of-price"></rect>
-                            <img src="images/4-two beds.jpg" alt="Two Beds Room Picture">
-                            <p>$388.98/Night <span class="dining-include">*Dining included</span></p>
+                            <img src="/Team_Project/images/4-two beds.jpg" alt="Two Beds Room Picture">
+                            <p>$388.98/Nuit <span class="dining-include">*Dîner inclus</span></p>
 
                         </div>
                     </div>
@@ -84,12 +84,12 @@
                 <form id="hotel_reservation" method="post" action="#">
                     <!--Guest Personal Information-->
                     <fieldset>
-                        <legend>Guest Personal Information</legend>
+                        <legend>Informations Personnelles</legend>
                         <table>
                             <!--row 1-->
                             <tr>
                                 <td>
-                                    <lable for="first_name">First Name:</lable>
+                                    <lable for="first_name">Prénom:</lable>
                                 </td>
                                 <td>
                                     <input type="text" id="first_name" name="first_name" size="20" maxlength="20">
@@ -98,7 +98,7 @@
                             <!--row 2-->
                             <tr>
                                 <td>
-                                    <lable for="Last_name">Last Name:</lable>
+                                    <lable for="Last_name">Nom de Famille:</lable>
                                 </td>
                                 <td>
                                     <input type="text" id="last_name" name="last_name" size="20" maxlength="20">
@@ -107,7 +107,7 @@
                             <!--row 3-->
                             <tr>
                                 <td>
-                                    <label for="email">Email Address:</label>
+                                    <label for="email">Addresse Courriel:</label>
                                 </td>
                                 <td>
                                     <input type="email" id="email" name="email" size="40" maxlength="40">
@@ -117,12 +117,12 @@
                     </fieldset>
                     <!--Hotel Reservation-->
                     <fieldset>
-                        <legend>Hotel Reservation</legend>
+                        <legend>Réservation d'Hôtel</legend>
                         <table>
                             <!--row 1-->
                             <tr>
                                 <td>
-                                    <label for="adults">Adults:</label>
+                                    <label for="adults">Adultes:</label>
                                 </td>
                                 <td>
                                     <select id="adults">
@@ -134,7 +134,7 @@
                             <!--row 2-->
                             <tr>
                                 <td>
-                                    <label for="children">Children:</label>
+                                    <label for="children">Enfants:</label>
                                 </td>
                                 <td>
                                     <select id="children">
@@ -149,7 +149,7 @@
                             <!--row 3-->
                             <tr>
                                 <td>
-                                    <label for="number_of_nights">Number of Nights:</label>
+                                    <label for="number_of_nights">Nombre de Nuits:</label>
                                 </td>
                                 <td>
                                     <input type="number" id="number_of_nights" value="1" onchange="displayTotalPrice()">
@@ -158,7 +158,7 @@
                             <!--row 4-->
                             <tr>
                                 <td>
-                                    <label for="check_in_date">Check-In Date:</label>
+                                    <label for="check_in_date">Date d'Arrivée:</label>
                                 </td>
                                 <td>
                                     <input type="date" id="check_in_date">
@@ -171,21 +171,19 @@
 
             <div class="reservation-buttons">
                 <div class="price-button">
-                    <p>Total price:</p>
+                    <p>Prix Total:</p>
                     <p id="price">$ 0.00</p>
                 </div>
                 <div class="submit-button" onclick="validateReservation()">
-                    <p>Book now</p>
+                    <p>Réservez</p>
                 </div>
             </div>
-
-
         </div>
         <footer>
             <p>CustomerService@ccab.com</p>
             <p>514 977 8686</p>
             <p>2800, Chemin du Village, Tremblant, Canada J8E 1A4</p>
-            <p>Copyright © 2002 CuiteBunnyBay.com™. All rights reserved.</p>
+            <p>Copyright © 2002 CutieBunnyBay.com™. Tous droits réservés.</p>
         </footer>
     </div>
 </body>
