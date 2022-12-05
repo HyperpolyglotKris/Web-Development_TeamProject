@@ -5,26 +5,9 @@
     <meta charset="UTF-8">
     <title>Sign in</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/main.js"></script>
+  
 
-    <script>
-        function validateForm(){
-            let x = document.forms["sign-in"]["email"].value;
-            let y = document.forms["sign-in"]["password"].value;
-
-            if(x == ""){
-                alert("Pls enter your email address!");
-                return false;
-
-            } else if(y == ""){
-                alert("Pls enter your password!");
-                return false;
-            }
-            else {
-                alert("You have sucessfully signed in!");
-                return true;
-            }
-        }
-    </script>
 </head>
 
 
@@ -46,46 +29,62 @@
         </div>
     </header>
 
-    <main>
+            <main class="sign-in-up">
+                <div class="sign-in-up-form">
+                    <form id="sign-in" name="sign-in" action="home.html" onsubmit="return valideSignInForm()">
+                        <fieldset>
+                            <h3>Sign in to your account</h3>
+                            <table>
+                                <!--row 1-->
+                                <tr>
+                                    <td>
+                                        <lable for="Email_Address">Email Address: </lable>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="email" id="email-signin" name="email-signin" size="40"
+                                            maxlength="40" required autofocus>
+                                    </td>
+                                </tr>
+                                <!--row 2-->
+                                <tr>
+                                    <td>
+                                        <lable for="password">Password:</lable>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="password-signin" name="password-signin"
+                                            size="40" maxlength="40" height="52" required>
+                                    </td>
+                                </tr>
+                            </table>
+                            <input type="submit" id="sign-in-btn" value="Sign in">
+                        </fieldset>
+                    </form>
+                    <br>
 
-        <div class="sign-in-up-form">
-            <form id="sign-in" name="sign-in" action="home.html" onsubmit="return validateForm()" >
-          
-            <fieldset>
+                   <!--
+                    <label for="retrieveKey">Enter Key to retrieve item</label><br>
+                    <input type="text" id="retrieveKey" placeholder="retrieveKey" required><br><br>
+                    <button id="retrieveButton">Retrieve records</button>
+                    <br>
+                    <div id="retrieve"></div>
+                    <br>
+                    <label for="removeKey">Enter Key to delete item</label><br>
+                    <input type="text" id="removeKey" placeholder="removeKey" required><br><br>
+                    <button id="removeButton">Remove record</button><br><br>
+                    
+                    <button id="clearButton">Clear all records</button>
+                    -->
 
-                <h3>Sign in to your account</h3>
-                <table>
-                    <!--row 1-->
-                    <tr>
-                        <td>
-                            <lable for="Email_Address">Email Address:  </lable>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="email" id="email" name="email" size="40" maxlength="40">
-                        </td>
-                    </tr>
-                  
-                    <!--row 2-->
-                    <tr>
-                        <td>
-                            <lable for="password">Password:</lable>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" id="password" name="password" size="40" maxlength="40" height="52">
-                        </td>
-                    </tr>
-                </table>
-                <input type="submit" id="sign-in-btn" value="Sign in">
 
-               
-                
-            </fieldset>
-        </form>
-        
+
+                </div>
+
+
+            </main>
         </div>
             
     </main>
