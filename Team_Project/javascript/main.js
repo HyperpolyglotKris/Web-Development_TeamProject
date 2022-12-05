@@ -89,11 +89,11 @@ function validateSignUp() {
     } else if (rePasswordSignUp == "") {
         alert("Please re-enter your password!");
         return false;
-    } else if (passwordSignUp != rePasswordSignUp) {
-        alert("Passwords do not match!");
-        return false;
     } else if (passwordSignUp.length < 6) {
         alert("Password should be at least 6 charactors long!");
+        return false;
+    } else if (passwordSignUp != rePasswordSignUp) {
+        alert("Passwords do not match!");
         return false;
     }
 

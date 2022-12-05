@@ -5,26 +5,7 @@
     <meta charset="UTF-8">
     <title>Sign in</title>
     <link rel="stylesheet" href="/Team_Project/css/styles.css">
-
-    <script>
-        function validateForm() {
-            let x = document.forms["sign-in"]["email"].value;
-            let y = document.forms["sign-in"]["password"].value;
-
-            if (x == "") {
-                alert("Please enter your email address!");
-                return false;
-
-            } else if (y == "") {
-                alert("Please enter your password!");
-                return false;
-            }
-            else {
-                alert("You have sucessfully signed in!");
-                return true;
-            }
-        }
-    </script>
+    <script src="/Team_Project/javascript/main.js"></script>
 </head>
 
 <body>
@@ -48,31 +29,32 @@
 
             <main class="sign-in-up">
                 <div class="sign-in-up-form">
-                    <form id="sign-in" name="sign-in" action="home.html" onsubmit="return validateForm()">
+                    <form id="sign-in" name="sign-in" action="index.html" onsubmit="return validateSignIn()">
                         <fieldset>
                             <h3>Connectez-vous !</h3>
                             <table>
                                 <!--row 1-->
                                 <tr>
                                     <td>
-                                        <lable for="Email_Address">Addresse Courriel: </lable>
+                                        <lable for="email-signin">Addresse Courriel: </lable>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="email" id="email" name="email" size="40" maxlength="40">
+                                        <input type="email" id="email-signin" name="email-signin" size="40"
+                                            maxlength="40">
                                     </td>
                                 </tr>
                                 <!--row 2-->
                                 <tr>
                                     <td>
-                                        <lable for="password">Mot-De-Passe:</lable>
+                                        <lable for="password-signin">Mot-De-Passe:</lable>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="password" id="password" name="password" size="40" maxlength="40"
-                                            height="52">
+                                        <input type="password" id="password-signin" name="password-signin" size="40"
+                                            maxlength="40" height="52">
                                     </td>
                                 </tr>
                             </table>
