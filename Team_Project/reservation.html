@@ -3,17 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reservation at Cutie Bunny Bay hotel">
     <title>Reservation</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="/Team_Project/javascript/main.js"></script>
 </head>
 
 <body>
     <div class="page-container">
         <div class="reservation-content">
             <header>
-                <img src="images/0-logo.png" />
+                <img src="images/0-logo.png" alt="Cutie Bunny Logo" />
                 <div class="header-middle">
-                    <a href="home.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="attractions.html">Attractions</a>
                     <a href="dining.html">Dining</a>
                     <a id="active" href="reservation.html">Reservation</a>
@@ -22,7 +26,7 @@
                 <div class="header-other">
                     <a id="signin" href="sign_in.html">Sign In</a>
                     <a id="signup" href="sign_up.html">Sign Up</a>
-                    <a id="language">EN/FR</a>
+                    <a id="language" href="french/reservation.html">EN/FR</a>
                 </div>
             </header>
 
@@ -37,46 +41,49 @@
             <div class="reservation-grid">
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-pool" name="hotel"
-                                value="Room with a pool">
-                            <h4>Room with a pool</h4>
+                        <div class="room-name"> <input type="radio" id="room-pool" name="hotel" value="0"
+                                onchange="displayTotalPrice()">
+                            <h4>Room With A Pool</h4>
                         </div>
                         <div class="room-price">
-                            <img src="images/4-pool.jpg">
-                            <p>$466.99/Night</p>
-                            <p>Dining included</p>
+                            <rect class="background-of-price"></rect>
+                            <img src="images/4-pool.jpg" alt="Room With A Pool Picture">
+                            <p>$466.99/Night <span class="dining-include">*Dining included</span></p>
+
                         </div>
                     </div>
                 </label>
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-suite" name="hotel"
-                                value="Room with a pool">
+                        <div class="room-name"> <input type="radio" id="room-suite" name="hotel" value="1"
+                                onchange="displayTotalPrice()">
                             <h4>Suite</h4>
                         </div>
                         <div class="room-price">
-                            <img src="images/4-suit.jpg">
-                            <p>$422.88/Night</p>
-                            <p>Dining included</p>
+                            <rect class="background-of-price"></rect>
+                            <img src="images/4-suit.jpg" alt="Suite Picture">
+                            <p>$422.88/Night <span class="dining-include">*Dining included</span></p>
+
                         </div>
                     </div>
                 </label>
                 <label>
                     <div class="hotel">
-                        <div class="room-name"> <input type="radio" id="room-double" name="hotel"
-                                value="Room with a pool">
-                            <h4>Two beds room</h4>
+                        <div class="room-name"> <input type="radio" id="room-double" name="hotel" value="2"
+                                onchange="displayTotalPrice()">
+                            <h4>Two Beds Room</h4>
                         </div>
                         <div class="room-price">
-                            <img src="images/4-two beds.jpg">
-                            <p>$388.98/Night</p>
-                            <p>Dining included</p>
+                            <rect class="background-of-price"></rect>
+                            <img src="images/4-two beds.jpg" alt="Two Beds Room Picture">
+                            <p>$388.98/Night <span class="dining-include">*Dining included</span></p>
+
                         </div>
                     </div>
                 </label>
             </div>
 
-            <div class="form-grid">
+            <div class="reservation-form">
                 <form id="hotel_reservation" method="post" action="#">
                     <!--Guest Personal Information-->
                     <fieldset>
@@ -88,7 +95,7 @@
                                     <lable for="first_name">First Name:</lable>
                                 </td>
                                 <td>
-                                    <input type="text" id="first_name" size="20" maxlength="20">
+                                    <input type="text" id="first_name" name="first_name" size="20" maxlength="20">
                                 </td>
                             </tr>
                             <!--row 2-->
@@ -97,7 +104,7 @@
                                     <lable for="Last_name">Last Name:</lable>
                                 </td>
                                 <td>
-                                    <input type="text" id="Last_name" size="20" maxlength="20">
+                                    <input type="text" id="last_name" name="last_name" size="20" maxlength="20">
                                 </td>
                             </tr>
                             <!--row 3-->
@@ -106,7 +113,7 @@
                                     <label for="email">Email Address:</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="email" size="40" maxlength="30">
+                                    <input type="email" id="email" name="email" size="40" maxlength="40">
                                 </td>
                             </tr>
                         </table>
@@ -121,7 +128,10 @@
                                     <label for="adults">Adults:</label>
                                 </td>
                                 <td>
-                                    <input type="number" id="adults" min="1" max="2">
+                                    <select id="adults">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
                                 </td>
                             </tr>
                             <!--row 2-->
@@ -130,7 +140,13 @@
                                     <label for="children">Children:</label>
                                 </td>
                                 <td>
-                                    <input type="number" id="children" min="0" max="4">
+                                    <select id="children">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
                                 </td>
                             </tr>
                             <!--row 3-->
@@ -139,37 +155,16 @@
                                     <label for="number_of_nights">Number of Nights:</label>
                                 </td>
                                 <td>
-                                    <select id="number_of_nights">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10" 10></option>
-
-                                    </select>
+                                    <input type="number" id="number_of_nights" value="1" onchange="displayTotalPrice()">
                                 </td>
                             </tr>
                             <!--row 4-->
                             <tr>
                                 <td>
-                                    <label for="arrival_date">Arrival Date:</label>
+                                    <label for="check_in_date">Check-In Date:</label>
                                 </td>
                                 <td>
-                                    <input type="date" id="arrival_date">
-                                </td>
-                            </tr>
-                            <!--row 5-->
-                            <tr>
-                                <td>
-                                    <label for="departure_date">Departure Date:</label>
-                                </td>
-                                <td>
-                                    <input type="date" id="departure_date">
+                                    <input type="date" id="check_in_date">
                                 </td>
                             </tr>
                         </table>
@@ -180,9 +175,9 @@
             <div class="reservation-buttons">
                 <div class="price-button">
                     <p>Total price:</p>
-                    <p id="price">$0.00</p>
+                    <p id="price">$ 0.00</p>
                 </div>
-                <div class="submit-button">
+                <div class="submit-button" onclick="validateReservation()">
                     <p>Book now</p>
                 </div>
             </div>
