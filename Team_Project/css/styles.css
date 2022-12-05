@@ -6,12 +6,13 @@ body {
     background-color: beige;
     margin: 0;
     min-height: 100vh;
+    font-family: 'Calibri', sans-serif;
 }
 
 /* General Section */
 
 .background-image {
-    background-image: url(/Team_Project/images/1-home.jpeg);
+    background-image: url(/Team_Project/images/1-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -58,7 +59,6 @@ p {
 .content {
     margin: 0px 10%;
     display: grid;
-    height: 20%;
     grid-template-rows: 1fr 1fr;
     align-items: center;
 }
@@ -69,7 +69,7 @@ p {
 }
 
 .content-wrap {
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-rows: 4fr 1fr;
 }
@@ -181,9 +181,6 @@ h3 {
 
 .dot1,
 .dot2 {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -192,7 +189,7 @@ h3 {
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: .5
     }
 
     to {
@@ -423,10 +420,9 @@ article {
 .room-price p {
     position: absolute;
     bottom: 2%;
-    left: 5vw;
+    left: 20%;
     color: white;
     font-size: 25px;
-
 }
 
 .background-of-price {
@@ -435,14 +431,6 @@ article {
     bottom: 2%;
     width: 100%;
     background-color: #546d8394;
-
-}
-
-.dining-include {
-    left: 60%;
-    font-size: 18px;
-    color: white;
-
 }
 
 .room-text {
@@ -503,7 +491,7 @@ article {
 }
 
 .reservation-content {
-    padding-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .reservation-form tr {
@@ -567,6 +555,10 @@ article {
     margin-bottom: 5rem;
 }
 
+.special_events_container {
+    margin: 0 2vw;
+}
+
 /*Sign in/up Section*/
 
 .sign-in-up-form {
@@ -606,6 +598,11 @@ article {
 
 /* Footer Section */
 
+.email_link {
+    color: #6d8a92;
+    font-family: 'Calibri', sans-serif;
+}
+
 .sign-content {
     margin-bottom: 5rem;
 }
@@ -628,4 +625,150 @@ footer p {
     font-size: 10pt;
     color: #6d8a92;
     text-align: center;
+}
+
+/* Small devices (tablets, 600.8px and above) */
+@media screen and (max-width: 991.8px) and (min-width: 600.8px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-other {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 3vh;
+    }
+
+    /* Arttraction */
+    .list-types {
+        grid-template-columns: 1fr;
+    }
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Dining */
+    .dining-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .hotel img {
+        object-fit: cover;
+        height: 250px;
+        width: 30vw;
+    }
+
+    .restaurant {
+        width: 40vw;
+    }
+
+    .restaurant img {
+        width: 35vw;
+    }
+
+
+    /* Sign Pages Footer */
+    .sign-content {
+        margin-bottom: 8rem;
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .header-middle {
+        grid-template-columns: 1fr;
+        gap: 1vh;
+    }
+
+    header img {
+        height: 100px;
+    }
+
+    .logo {
+        text-align: center;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .header-other {
+        margin-top: 2vh;
+    }
+
+    .content-wrap {
+        margin-bottom: 8rem;
+    }
+
+    footer {
+        height: 6rem;
+        grid-template-columns: 1fr;
+        gap: 2px;
+
+    }
+
+    footer p {
+        padding-bottom: 2px;
+    }
+
+    /* Arttractions */
+    .list-types {
+        grid-template-columns: 1fr;
+    }
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attractions-content {
+        margin-bottom: 8rem;
+    }
+
+    /* Dining */
+    .dining-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    .restaurant {
+        width: 80vw;
+    }
+
+    .restaurant img {
+        width: 70vw;
+    }
+
+    /* Reservation */
+    .reservation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel img {
+        object-fit: cover;
+        height: 300px;
+        width: 70vw;
+    }
+
+    .reservation-content {
+        margin-bottom: 8rem;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    .room-price p {
+        left: 20vw;
+    }
+
+    /* Sign Pages Footer */
+    .sign-content {
+        margin-bottom: 8rem;
+    }
 }
