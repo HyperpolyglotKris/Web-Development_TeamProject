@@ -6,6 +6,7 @@ body {
     background-color: beige;
     margin: 0;
     min-height: 100vh;
+    font-family: 'Calibri', sans-serif;
 }
 
 /* General Section */
@@ -636,4 +637,118 @@ footer p {
 .email_link{
     color: #6d8a92;
     font-family: 'Calibri', sans-serif;
+}
+
+/* Small devices (tablets, 600.8px and above) */
+@media screen and (max-width: 991.8px) and (min-width: 600.8px) {
+    header {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .header-other {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 3vh;
+    }
+
+       /*arttraction */
+       .list-types {
+        grid-template-columns: 1fr;
+    }
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+
+      /* dining */
+      .dining-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .hotel img {
+        object-fit: cover;
+        height: 250px;
+        width: 30vw;
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .header-middle {
+        grid-template-columns: 1fr;
+        gap: 1vh;
+    }
+
+    header img {
+        height: 100px;
+    }
+
+    .logo {
+        text-align: center;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .header-other {
+        margin-top: 2vh;
+    }
+
+    .content-wrap {
+        padding-bottom: 6rem;
+
+    }
+
+    footer {
+        height: 6rem;
+        grid-template-columns: 1fr;
+        gap: 2px;
+       
+    }
+    footer p {
+        padding-bottom: 5px;
+    }
+    /*arttraction */
+    .list-types {
+        grid-template-columns: 1fr;
+    }
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* dining */
+    .dining-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+     /*reservation*/
+    .reservation-grid {
+        grid-template-columns: 1fr;
+    }
+    .hotel img {
+        object-fit: cover;
+        height: 300px;
+        width: 70vw;
+    }
+    .reservation-content{
+        margin-bottom: 50px;
+    }
+    h4{
+        font-size: 25px;
+    }
+    .room-price p{
+        left: 20vw;
+    }
+
+    /*events*/
+    .special_events{
+    
+    }
+   
+
+
 }
