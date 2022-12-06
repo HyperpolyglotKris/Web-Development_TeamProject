@@ -170,7 +170,7 @@ h3 {
 }
 
 .slideshow-container {
-    
+
     background-color: #98b5c8;
     border-radius: 30px;
     padding: 3%;
@@ -621,7 +621,6 @@ footer p {
     .list-types {
         grid-template-columns: 1fr;
     }
- 
 
 
     /* Dining */
@@ -629,7 +628,7 @@ footer p {
         grid-template-columns: 1fr 1fr;
         text-align: center;
     }
-    
+
     .hotel img {
         object-fit: cover;
         height: 250px;
