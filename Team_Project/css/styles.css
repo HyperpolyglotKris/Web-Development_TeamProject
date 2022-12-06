@@ -65,7 +65,6 @@ p {
 .content {
     margin: 0px 10%;
     display: grid;
-    height: 20%;
     grid-template-rows: 1fr 1fr;
     align-items: center;
 }
@@ -76,7 +75,7 @@ p {
 }
 
 .content-wrap {
-    padding-bottom: 3rem;
+    margin-bottom: 5rem;
     display: grid;
     grid-template-rows: 4fr 1fr;
 }
@@ -188,9 +187,6 @@ h3 {
 
 .dot1,
 .dot2 {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -199,7 +195,7 @@ h3 {
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: .5
     }
 
     to {
@@ -372,6 +368,14 @@ article {
     color: #ffffff;
 }
 
+.restaurant img:hover {
+    box-shadow: 0 0 2px 1px white;
+}
+
+.restaurant a {
+    margin: 0;
+}
+
 /* Reservation Section */
 
 .reservation h2 {
@@ -427,10 +431,9 @@ article {
 .room-price p {
     position: absolute;
     bottom: 2%;
-    left: 5vw;
+    left: 20%;
     color: white;
     font-size: 25px;
-
 }
 
 .background-of-price {
@@ -439,14 +442,6 @@ article {
     bottom: 2%;
     width: 100%;
     background-color: #546d8394;
-
-}
-
-.dining-include {
-    left: 60%;
-    font-size: 18px;
-    color: white;
-
 }
 
 .room-text {
@@ -507,7 +502,7 @@ article {
 }
 
 .reservation-content {
-    padding-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .reservation-form tr {
@@ -519,24 +514,36 @@ article {
 
 .special_events {
     display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
+    margin: 0 2vw;
 }
 
 .special_events_txt_and_img {
-    display: flex;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+
     margin-bottom: 3rem;
 }
 
 .special_events_img {
-    margin-right: 3rem;
-    width: 30%;
-    height: auto;
+    max-width: 30vw;
+    max-height: 100%;
     float: left;
+    align-self: center;
+    justify-self: center;
+    object-fit: cover;
 }
 
 .special_events_txt {
+    max-width: 100%;
     text-align: justify;
+    align-self: center;
+    margin-block-end: 0;
+    margin-block-start: 0;
 }
 
 .special_events_container h2 {
@@ -550,6 +557,7 @@ article {
 }
 
 .special_events_table table {
+    width: 100%;
     border: solid 1.5px black;
     border-collapse: collapse;
     text-align: center;
@@ -563,12 +571,16 @@ article {
     border: solid 2px #039c05;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .special_events-content {
     margin-bottom: 5rem;
+}
+
+.special_events_container {
+    margin: 0 auto;
 }
 
 /*Sign in/up Section*/
@@ -610,6 +622,11 @@ article {
 
 /* Footer Section */
 
+.email_link {
+    color: #6d8a92;
+    font-family: 'Calibri', sans-serif;
+}
+
 .sign-content {
     margin-bottom: 5rem;
 }
@@ -634,15 +651,13 @@ footer p {
     text-align: center;
 }
 
-.email_link{
-    color: #6d8a92;
-    font-family: 'Calibri', sans-serif;
-}
 
 /* Small devices (tablets, 600.8px and above) */
 @media screen and (max-width: 991.8px) and (min-width: 600.8px) {
+
     header {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 3fr;
+
     }
 
     .header-other {
@@ -651,23 +666,54 @@ footer p {
         margin-top: 3vh;
     }
 
-       /*arttraction */
-       .list-types {
+
+    /* Arttraction */
+    .list-types {
         grid-template-columns: 1fr;
     }
+
     .attraction-grid {
         grid-template-columns: 1fr;
     }
 
-      /* dining */
-      .dining-grid {
+
+    /* Dining */
+    .dining-grid {
         grid-template-columns: 1fr 1fr;
         text-align: center;
     }
+    
     .hotel img {
         object-fit: cover;
         height: 250px;
         width: 30vw;
+    }
+
+    .restaurant {
+        width: 40vw;
+    }
+
+    .restaurant img {
+        height: 30vh;
+    }
+
+    /* Events */
+
+    .special_events_container {
+        margin: 0 12px;
+    }
+
+    .special_events_txt_and_img {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .special_events_img {
+        max-width: 100%;
+    }
+
+    /* Sign Pages Footer */
+    .sign-content {
+        margin-bottom: 5rem;
     }
 
 }
@@ -680,7 +726,7 @@ footer p {
 
     .header-middle {
         grid-template-columns: 1fr;
-        gap: 1vh;
+
     }
 
     header img {
@@ -698,57 +744,88 @@ footer p {
     }
 
     .content-wrap {
-        padding-bottom: 6rem;
 
+        margin-bottom: 8rem;
     }
 
     footer {
         height: 6rem;
         grid-template-columns: 1fr;
         gap: 2px;
-       
     }
+
     footer p {
-        padding-bottom: 5px;
+        padding-bottom: 2px;
     }
-    /*arttraction */
+
+    /* Arttractions */
     .list-types {
         grid-template-columns: 1fr;
     }
+
     .attraction-grid {
         grid-template-columns: 1fr;
     }
 
-    /* dining */
+    .attractions-content {
+        margin-bottom: 8rem;
+    }
+
+    /* Dining */
     .dining-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        margin-bottom: 8rem;
     }
 
-     /*reservation*/
+    .restaurant {
+        width: 80vw;
+    }
+
+    .restaurant img {
+        width: 70vw;
+    }
+
+    /* Reservation */
     .reservation-grid {
         grid-template-columns: 1fr;
     }
+
     .hotel img {
         object-fit: cover;
         height: 300px;
         width: 70vw;
     }
-    .reservation-content{
-        margin-bottom: 50px;
+
+
+    .reservation-content {
+        margin-bottom: 8rem;
     }
-    h4{
+
+    h4 {
         font-size: 25px;
     }
-    .room-price p{
+
+    .room-price p {
         left: 20vw;
     }
 
-    /*events*/
-    .special_events{
-    
+    /* Special */
+
+    .special_events_txt_and_img {
+        grid-template-columns: 1fr 1fr;
     }
-   
 
+    .special_events_img {
+        max-width: 100%;
+    }
 
+    .special_events-content {
+        margin-bottom: 8rem;
+    }
+
+    /* Sign Pages Footer */
+    .sign-content {
+        margin-bottom: 8rem;
+    }
 }
