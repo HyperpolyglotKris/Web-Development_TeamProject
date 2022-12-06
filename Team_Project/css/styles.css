@@ -171,19 +171,17 @@ h3 {
 }
 
 .slideshow-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    
     background-color: #98b5c8;
     border-radius: 30px;
-    height: 300px;
-    position: relative;
+    padding: 3%;
     margin: auto;
 }
 
 .slideshow-container img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 95%;
+    margin: 2%;
+    text-align: center;
 }
 
 .dot1,
@@ -220,59 +218,11 @@ h3 {
     color: #080000;
     font-size: 18px;
     padding: 8px 12px;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    width: auto;
-    ;
-    font-family: 'Calibri', sans-serif;
 }
 
-.image {
-    vertical-align: middle;
-    width: auto;
-}
 
-.activity-card {
-    background-color: #574c45;
-    border-radius: 16px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3vw;
-    margin: 2% 3%;
-}
 
-.activity-title {
-    font-family: 'Calibri', sans-serif;
-    margin-left: 1vw;
-    font-size: 32px;
-}
 
-.ul-activities {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-inline-start: 0;
-    padding-inline-start: 20px;
-    list-style-position: inside;
-}
-
-.activity-card img {
-    object-fit: cover;
-    height: 26vh;
-    width: 20vw;
-}
-
-.activity-card p {
-    color: white;
-    padding: 10px;
-    white-space: normal;
-}
-
-article {
-    font-family: 'Calibri', sans-serif;
-    font-size: 18px;
-}
 
 .attractions-content {
     margin-bottom: 5rem;
@@ -655,9 +605,7 @@ footer p {
        .list-types {
         grid-template-columns: 1fr;
     }
-    .attraction-grid {
-        grid-template-columns: 1fr;
-    }
+ 
 
       /* dining */
       .dining-grid {
@@ -745,9 +693,7 @@ footer p {
     }
 
     /*events*/
-    .special_events{
-    
-    }
+  
    
 
 
