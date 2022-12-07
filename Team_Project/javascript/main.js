@@ -243,43 +243,45 @@ function validateSignInFrench() {
 }
 
 // Function for Attractions Page Slideshow
-let slideIndex1 = 0;
-let slideIndex2 = 0;
-showSlides();
-showSlides2();
 
-function showSlides() {
+function slideShow1() {
     let i;
-    let slides = document.getElementsByClassName("mySlides1");
+    let slides1 = document.getElementsByClassName("mySlides1");
     let dots = document.getElementsByClassName("dot1");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+
+    for (i = 0; i < slides1.length; i++) {
+        slides1[i].style.display = "none";
     }
-    slideIndex1++;
-    if (slideIndex1 > slides.length) { slideIndex1 = 1 }
+    slideIndex++;
+    if (slideIndex > slides1.length) {
+        slideIndex = 1;
+    }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex1 - 1].style.display = "block";
-    dots[slideIndex1 - 1].className += " active";
-    setTimeout(showSlides, 6000); // Change image every 6 seconds
-}
 
-function showSlides2() {
+    slides1[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(slideShow1, 2000);
+}
+function slideShow2() {
     let i;
-    let slides = document.getElementsByClassName("mySlides2");
+    let slides2 = document.getElementsByClassName("mySlides2");
     let dots = document.getElementsByClassName("dot2");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
     }
     slideIndex2++;
-    if (slideIndex2 > slides.length) { slideIndex2 = 1 }
+    if (slideIndex2 > slides2.length) {
+        slideIndex2 = 1;
+    }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex2 - 1].style.display = "block";
+    slides2[slideIndex2 - 1].style.display = "block";
     dots[slideIndex2 - 1].className += " active";
-    setTimeout(showSlides2, 6000); // Change image every 6 seconds
+    setTimeout(slideShow2, 2000);
 }
 
 // Functions to Retrive, Remove or Clear -> Sign-In page

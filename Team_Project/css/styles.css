@@ -148,6 +148,13 @@ h3 {
     gap: 3vw;
     margin: 2% 3%;
 }
+.title-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin: 2% 3%;
+
+}
 
 .activity-title {
     font-family: 'Calibri', sans-serif;
@@ -161,67 +168,10 @@ h3 {
     font-size: 18px;
 }
 
-.mySlides1,
-.mySlides2 {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.slideshow-container {
-
-    background-color: #98b5c8;
-    border-radius: 30px;
-    padding: 3%;
-    margin: auto;
-}
-
-.slideshow-container img {
-    width: 95%;
-    margin: 2%;
-    text-align: center;
-}
-
-.dot1,
-.dot2 {
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-@keyframes fade {
-    from {
-        opacity: .5
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-.active {
-    background-color: #717171;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.text {
-    color: #080000;
-    font-size: 18px;
-    padding: 8px 12px;
-}
-
-
-
-
-
 .attractions-content {
     margin-bottom: 5rem;
+   
+   
 }
 
 .activity-list ul {
@@ -245,6 +195,60 @@ h3 {
 .list-types {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.dot1,
+.dot2 {
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    margin: 2% 3%;
+    
+    
+}
+.atcitityCart {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 10px;   
+}
+.images {
+    width: 100%;
+    margin-top: 5px;
+}
+.text{
+   width: 80%;
+   text-align: center;   
+}
+
+.mySlides1 .mySlides2{
+    display: none;
+}
+
+.fade{
+    background-color: #98b5c8;
+    border-radius: 20px;
+    text-align: left;
+    width: 92%;
+    padding: 20px;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from{opacity: .5;}
+    to{opacity: 1;}
 }
 
 /* Dining Section */
@@ -621,6 +625,7 @@ footer p {
     .list-types {
         grid-template-columns: 1fr;
     }
+    
 
 
     /* Dining */
@@ -708,14 +713,16 @@ footer p {
     .list-types {
         grid-template-columns: 1fr;
     }
-
-    .attraction-grid {
+    .attractions-content {
+        
+        margin-bottom: 12rem;
+    }
+    .card-grid{
         grid-template-columns: 1fr;
     }
-
-    .attractions-content {
-        margin-bottom: 8rem;
-    }
+    /* .attraction-grid{
+        grid-template-columns: 1fr;
+    } */
 
     /* Dining */
     .dining-grid {
